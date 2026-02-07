@@ -125,6 +125,8 @@ p {
     border: none;
     cursor: pointer;
     gap: 5px;
+    padding: 5px;
+    z-index: 1001;
 }
 
 .hamburger span {
@@ -132,6 +134,20 @@ p {
     height: 3px;
     background: #b1814a;
     transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+/* Hamburger Animation - X */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* ========== HERO SECTION ========== */
