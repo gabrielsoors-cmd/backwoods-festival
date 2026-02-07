@@ -23,3 +23,27 @@ navLinks.forEach(link => {
 });
 
 // Smooth scroll already handled by CSS scroll-behavior
+
+// ===================================
+// COOKIE BANNER
+// ===================================
+
+// Check if user has already accepted cookies
+if (!localStorage.getItem('cookiesAccepted')) {
+    const cookieBanner = document.getElementById('cookie-banner');
+    if (cookieBanner) {
+        cookieBanner.classList.add('show');
+    }
+}
+
+// Accept cookies
+const acceptButton = document.getElementById('accept-cookies');
+if (acceptButton) {
+    acceptButton.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        const cookieBanner = document.getElementById('cookie-banner');
+        if (cookieBanner) {
+            cookieBanner.classList.remove('show');
+        }
+    });
+}

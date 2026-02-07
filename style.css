@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Courier New', 'Courier', monospace;
     line-height: 1.6;
     color: #f5f5f5;
     background-color: #0a0a0a;
@@ -35,7 +35,7 @@ a {
 
 /* ========== TYPOGRAPHY ========== */
 h1, h2, h3 {
-    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-family: 'Bahianita', 'Impact', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #b1814a;
@@ -74,11 +74,10 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(10px);
+    background: #4c322a;
     z-index: 1000;
     padding: 1rem 0;
-    border-bottom: 2px solid #b1814a;
+    border-bottom: 3px solid #b1814a;
 }
 
 .nav-container {
@@ -102,15 +101,20 @@ p {
 }
 
 .nav-menu a {
-    color: #f5f5f5;
+    color: #0a0a0a;
+    background: #b1814a;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
+    letter-spacing: 3px;
+    font-family: 'Bahianita', 'Impact', sans-serif;
+    transition: all 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: #b1814a;
+    background: #d19d5e;
+    color: #0a0a0a;
 }
 
 /* Hamburger Menu (Mobile) */
@@ -175,12 +179,14 @@ p {
 
 .cta-button {
     display: inline-block;
-    padding: 15px 40px;
+    padding: 20px 60px;
     background: #b1814a;
     color: #0a0a0a;
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-weight: bold;
+    font-family: 'Bahianita', 'Impact', sans-serif;
     text-transform: uppercase;
+    letter-spacing: 3px;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
@@ -208,40 +214,49 @@ p {
     line-height: 1.8;
 }
 
-/* ========== EXPERIENCE SECTION ========== */
-.experience {
+/* ========== EXPERIENCE SECTION (Simple Blocks) ========== */
+/* ========== PROGRAM SECTION ========== */
+.program {
     padding: 80px 0;
-    background: #0a0a0a;
-}
-
-.experience h2 {
+    background: #4c322a;
     text-align: center;
+}
+
+.program h2 {
+    color: #b1814a;
+    font-size: 3rem;
     margin-bottom: 3rem;
+    font-family: 'Bahianita', 'Impact', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.experience-item {
-    background: #1a1a1a;
+.program-image-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #4c322a;
     padding: 2rem;
     border-radius: 10px;
-    border: 2px solid #b1814a;
-    text-align: center;
-    transition: transform 0.3s ease;
+    border: 3px solid #b1814a;
 }
 
-.experience-item:hover {
-    transform: translateY(-10px);
-    border-color: #d19d5e;
+.program-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
 }
 
-.experience-item h3 {
-    color: #b1814a;
-    margin-bottom: 1rem;
+/* Mobile */
+@media (max-width: 768px) {
+    .program h2 {
+        font-size: 2rem;
+    }
+    
+    .program-image-container {
+        padding: 1rem;
+        max-width: 100%;
+    }
 }
 
 /* ========== LOCATION SECTION ========== */
@@ -267,6 +282,19 @@ p {
     border-radius: 10px;
     overflow: hidden;
     border: 3px solid #b1814a;
+    height: 500px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .map-container {
+        height: 400px;
+    }
 }
 
 /* ========== TICKETS SECTION ========== */
@@ -300,25 +328,154 @@ p {
     font-style: italic;
 }
 
-/* ========== FOOTER ========== */
-footer {
-    padding: 40px 0;
-    background: #000;
+
+/* ========== CONTACT PAGE ========== */
+.contact-page {
+    padding: 150px 0 80px;
+    background: #1a1a1a;
     text-align: center;
+    min-height: 100vh;
+}
+
+.contact-page h1 {
+    color: #b1814a;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-page > .container > p {
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+    color: #f5f5f5;
+}
+
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+}
+
+.contact-card {
+    background: #4c322a;
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    border: 3px solid #b1814a;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    border-color: #d19d5e;
+}
+
+.contact-card h3 {
+    color: #b1814a;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Bahianita', 'Impact', sans-serif;
+}
+
+.contact-card p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: #b1814a;
+    color: #0a0a0a;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Bahianita', 'Impact', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    background: #d19d5e;
+    transform: scale(1.05);
+}
+
+.contact-direct {
+    margin-top: 3rem;
+    padding-top: 2rem;
     border-top: 2px solid #b1814a;
 }
 
-footer p {
+.contact-direct p {
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
-    font-size: 1rem;
+}
+
+.contact-direct a {
+    color: #b1814a;
+    font-weight: bold;
+}
+
+.contact-direct a:hover {
+    color: #d19d5e;
+    text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .contact-page h1 {
+        font-size: 2.5rem;
+    }
+    
+    .contact-options {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .contact-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .contact-card h3 {
+        font-size: 1.6rem;
+    }
+    
+    .contact-button {
+        font-size: 1.1rem;
+        padding: 0.8rem 2rem;
+    }
+}
+
+
+/* ========== FOOTER ========== */
+footer {
+    padding: 60px 0;
+    background: #0a0a0a;
+    text-align: center;
+    border-top: 3px solid #b1814a;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+footer p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #f5f5f5;
 }
 
 footer a {
     color: #b1814a;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
+    color: #d19d5e;
     text-decoration: underline;
 }
 
@@ -383,5 +540,239 @@ footer a:hover {
     .cta-button {
         font-size: 1rem;
         padding: 12px 30px;
+    }
+}
+
+/* ========== 404 PAGE ========== */
+.error-page {
+    position: relative;
+    height: 100vh;
+    background: url('images/hero-1.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.error-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.error-content {
+    position: relative;
+    z-index: 10;
+    color: #f5f5f5;
+}
+
+.error-content h1 {
+    font-size: 8rem;
+    color: #b1814a;
+    margin-bottom: 1rem;
+    font-family: 'Bahianita', 'Impact', sans-serif;
+}
+
+.error-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.error-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .error-content h1 {
+        font-size: 5rem;
+    }
+    
+    .error-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* ========== POLICY PAGES ========== */
+.policy-page {
+    padding: 150px 0 80px;
+    background: #1a1a1a;
+    min-height: 100vh;
+}
+
+.policy-page .container {
+    max-width: 900px;
+}
+
+.policy-page h1 {
+    color: #b1814a;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.update-date {
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+}
+
+.policy-page h2 {
+    color: #b1814a;
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.policy-page h3 {
+    color: #d19d5e;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.policy-page p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.policy-page ul {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.policy-page li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+}
+
+.policy-page a {
+    color: #b1814a;
+    font-weight: bold;
+}
+
+.policy-page a:hover {
+    color: #d19d5e;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .policy-page h1 {
+        font-size: 2.2rem;
+    }
+    
+    .policy-page h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* ========== COOKIE BANNER ========== */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #210e05;
+    border-top: 3px solid #b1814a;
+    padding: 1.5rem;
+    z-index: 9999;
+    display: none;
+    animation: slideUp 0.5s ease;
+}
+
+.cookie-banner.show {
+    display: block;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cookie-content p {
+    font-size: 1rem;
+    margin: 0;
+    color: #f5f5f5;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.cookie-link {
+    padding: 0.8rem 1.5rem;
+    background: transparent;
+    border: 2px solid #b1814a;
+    color: #b1814a;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Bahianita', 'Impact', sans-serif;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cookie-link:hover {
+    background: #b1814a;
+    color: #0a0a0a;
+}
+
+.cookie-accept {
+    padding: 0.8rem 2rem;
+    background: #b1814a;
+    color: #0a0a0a;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Bahianita', 'Impact', sans-serif;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cookie-accept:hover {
+    background: #d19d5e;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cookie-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .cookie-link,
+    .cookie-accept {
+        width: 100%;
     }
 }
