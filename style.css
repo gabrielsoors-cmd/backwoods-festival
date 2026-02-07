@@ -247,6 +247,14 @@ p {
     letter-spacing: 3px;
 }
 
+.program-subtitle {
+    color: #888;
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
 .program-image-container {
     max-width: 1200px;
     margin: 0 auto;
