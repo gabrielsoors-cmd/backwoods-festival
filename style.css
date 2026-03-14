@@ -24,6 +24,7 @@ body {
     font-family: 'Courier New', 'Courier', monospace;
     line-height: 1.6;
     color: #f5f5f5;
+    background: url('images/hero-1.jpg') center top / cover no-repeat fixed;
     background-color: #0a0a0a;
     overflow-x: hidden;
 }
@@ -160,7 +161,7 @@ p {
 .hero {
     position: relative;
     height: 100vh;
-    background: url('images/hero-1.jpg') center/cover no-repeat;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -221,7 +222,7 @@ p {
 /* ========== ABOUT SECTION ========== */
 .about {
     padding: 80px 0;
-    background: #1a1a1a;
+    background: rgba(10, 10, 10, 0.92);
     text-align: center;
 }
 
@@ -240,7 +241,7 @@ p {
 /* ========== PROGRAM SECTION ========== */
 .program {
     padding: 80px 0;
-    background: rgba(33, 14, 5, 0.95);
+    background: rgba(33, 14, 5, 0.92);
     text-align: center;
 }
 
@@ -292,7 +293,7 @@ p {
 /* ========== TIMBERSPORTS SECTION ========== */
 .timbersports {
     padding: 80px 0;
-    background: #0a0a0a;
+    background: rgba(10, 10, 10, 0.92);
 }
 
 .timbersports h2 {
@@ -374,7 +375,7 @@ p {
 /* ========== LOCATION SECTION ========== */
 .location {
     padding: 80px 0;
-    background: rgba(26, 26, 26, 0.95);
+    background: rgba(26, 26, 26, 0.92);
     text-align: center;
 }
 
@@ -412,7 +413,7 @@ p {
 /* ========== TICKETS SECTION ========== */
 .tickets {
     padding: 80px 0;
-    background: #0a0a0a;
+    background: rgba(10, 10, 10, 0.92);
     text-align: center;
 }
 
