@@ -11,10 +11,6 @@
 }
 
 /* ========== FIXED BACKGROUND ========== */
-body {
-    background: url('images/hero-1.jpg') center/cover no-repeat fixed;
-    background-color: #0a0a0a;
-}
 
 html {
     scroll-behavior: smooth;
@@ -24,7 +20,7 @@ body {
     font-family: 'Courier New', 'Courier', monospace;
     line-height: 1.6;
     color: #f5f5f5;
-    background: url('images/hero-1.jpg') center top / cover no-repeat fixed;
+    background: url('images/hero-1.jpg') center top no-repeat fixed;
     background-color: #0a0a0a;
     overflow-x: hidden;
 }
