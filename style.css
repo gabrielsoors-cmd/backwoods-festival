@@ -283,6 +283,86 @@ p {
     }
 }
 
+/* ========== TIMBERSPORTS SECTION ========== */
+.timbersports {
+    padding: 80px 0;
+    background: #0a0a0a;
+}
+
+.timbersports h2 {
+    text-align: center;
+    color: #b1814a;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-family: 'Bahianita', 'Impact', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.timbersports-brand {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    color: #f5f5f5;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+
+.timbersports-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Video */
+.timbersports-video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 3px solid #b1814a;
+}
+
+.timbersports-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Text & Image */
+.timbersports-info p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.timbersports-image {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #b1814a;
+    margin-top: 2rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .timbersports h2 {
+        font-size: 2rem;
+    }
+    
+    .timbersports-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .timbersports-info p {
+        font-size: 1.1rem;
+    }
+}
+
 /* ========== LOCATION SECTION ========== */
 .location {
     padding: 80px 0;
