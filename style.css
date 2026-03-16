@@ -605,6 +605,12 @@ p {
     text-align: center;
 }
 
+.what-happens .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .what-happens h2 {
     color: #b1814a;
     margin-bottom: 3rem;
@@ -654,6 +660,12 @@ p {
     padding: 80px 0;
     background: rgba(10, 10, 10, 0.92);
     text-align: center;
+}
+
+.for-craftsmen .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .for-craftsmen h2 {
