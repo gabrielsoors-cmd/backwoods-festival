@@ -598,6 +598,127 @@ p {
 }
 
 
+/* ========== VAD HÄNDER SECTION ========== */
+.what-happens {
+    padding: 80px 0;
+    background: rgba(26, 26, 26, 0.92);
+    text-align: center;
+}
+
+.what-happens h2 {
+    color: #b1814a;
+    margin-bottom: 3rem;
+}
+
+.happening-block {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    padding: 2rem;
+    background: rgba(177, 129, 74, 0.1);
+    border: 2px solid #b1814a;
+    border-radius: 10px;
+}
+
+.happening-block h3 {
+    color: #b1814a;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.happening-block p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.what-happens .timbersports-video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #b1814a;
+    margin-top: 2rem;
+}
+
+.what-happens .timbersports-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ========== FÖR HANTVERKARE SECTION ========== */
+.for-craftsmen {
+    padding: 80px 0;
+    background: rgba(10, 10, 10, 0.92);
+    text-align: center;
+}
+
+.for-craftsmen h2 {
+    color: #b1814a;
+    margin-bottom: 2rem;
+}
+
+.for-craftsmen p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+}
+
+/* ========== TEAM SECTION ========== */
+.team {
+    padding: 80px 0;
+    background: rgba(26, 26, 26, 0.92);
+    text-align: center;
+}
+
+.team h2 {
+    color: #b1814a;
+    margin-bottom: 1rem;
+}
+
+.team > .container > p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.team-member {
+    padding: 2rem;
+    background: rgba(177, 129, 74, 0.1);
+    border: 2px solid #b1814a;
+    border-radius: 10px;
+}
+
+.team-member h3 {
+    color: #b1814a;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.team-member p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 /* ========== FOOTER ========== */
 footer {
     padding: 60px 0;
