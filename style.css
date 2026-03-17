@@ -620,7 +620,7 @@ p {
     max-width: 700px;
     margin: 0 auto 3rem;
     padding: 2rem;
-    background: rgba(177, 129, 74, 0.1);
+    background: #4c322a;
     border: 2px solid #b1814a;
     border-radius: 10px;
 }
@@ -707,7 +707,7 @@ p {
 
 .team-member {
     padding: 2rem;
-    background: rgba(177, 129, 74, 0.1);
+    background: #4c322a;
     border: 2px solid #b1814a;
     border-radius: 10px;
 }
