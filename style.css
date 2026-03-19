@@ -730,6 +730,109 @@ p {
     }
 }
 
+/* ========== TICKETS PAGE ========== */
+.tickets-page {
+    padding: 150px 0 80px;
+    background: rgba(26, 26, 26, 0.95);
+    text-align: center;
+    min-height: 100vh;
+}
+
+.tickets-page h1 {
+    color: #b1814a;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tickets-intro {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #f5f5f5;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.kwikk-container {
+    max-width: 100%;
+    width: 100%;
+    margin: 3rem auto;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .tickets-page h1 {
+        font-size: 2.5rem;
+    }
+    
+    .kwikk-container {
+        padding: 1rem;
+    }
+}
+
+/* ========== KWIKK WIDGET STYLING ========== */
+
+/* Main widget background */
+#kwikk_mws_10094_backwoods-2026 {
+    background: transparent !important;
+}
+
+/* Header section */
+#kwikk_mws_10094_backwoods-2026 h1,
+#kwikk_mws_10094_backwoods-2026 h2 {
+    color: #b1804c !important;
+    font-family: 'Bahianita', 'Impact', sans-serif !important;
+    background: transparent !important;
+}
+
+/* Subtitle text (HANTVERKARE | TIMBERSPORT...) */
+#kwikk_mws_10094_backwoods-2026 > p:first-of-type {
+    color: #b1804c !important;
+}
+
+/* Ticket titles - brown */
+#kwikk_mws_10094_backwoods-2026 h3 {
+    color: #b1804c !important;
+}
+
+/* Description text ONLY in ticket cards - BLACK */
+#kwikk_mws_10094_backwoods-2026 [class*="card"] p,
+#kwikk_mws_10094_backwoods-2026 [class*="ticket"] p,
+#kwikk_mws_10094_backwoods-2026 [class*="card"] div:not(a):not(button),
+#kwikk_mws_10094_backwoods-2026 [class*="ticket"] div:not(a):not(button) {
+    color: #0a0a0a !important;
+}
+
+/* Price - black and bold */
+#kwikk_mws_10094_backwoods-2026 strong,
+#kwikk_mws_10094_backwoods-2026 [class*="price"],
+#kwikk_mws_10094_backwoods-2026 [class*="cost"],
+#kwikk_mws_10094_backwoods-2026 [class*="card"] strong,
+#kwikk_mws_10094_backwoods-2026 [class*="ticket"] strong {
+    color: #0a0a0a !important;
+    font-weight: bold !important;
+    background: transparent !important;
+}
+
+/* ALL buttons and links - WHITE text */
+#kwikk_mws_10094_backwoods-2026 a,
+#kwikk_mws_10094_backwoods-2026 button,
+#kwikk_mws_10094_backwoods-2026 a *,
+#kwikk_mws_10094_backwoods-2026 button * {
+    color: #ffffff !important;
+}
+
+/* Footer text (Kwikk logo etc) - WHITE */
+#kwikk_mws_10094_backwoods-2026 > div:last-child,
+#kwikk_mws_10094_backwoods-2026 > div:last-child *,
+#kwikk_mws_10094_backwoods-2026 footer,
+#kwikk_mws_10094_backwoods-2026 footer *,
+#kwikk_mws_10094_backwoods-2026 > p:last-child {
+    color: #ffffff !important;
+    background: transparent !important;
+}
 
 /* ========== FOOTER ========== */
 footer {
