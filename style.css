@@ -772,6 +772,31 @@ p {
     }
 }
 
+/* ========== FORCE BACKWOODS FONTS (Override Kwikk) ========== */
+body,
+body p,
+body div,
+body span {
+    font-family: 'Courier New', 'Courier', monospace !important;
+}
+
+h1, h2, h3, 
+.nav-menu a,
+.cta-button,
+.ticket-cta,
+.contact-button,
+.cookie-link,
+.cookie-accept,
+.timbersports-brand {
+    font-family: 'Bahianita', 'Impact', sans-serif !important;
+}
+
+/* Keep Kwikk with its own fonts */
+#kwikk_mws_10094_backwoods-2026,
+#kwikk_mws_10094_backwoods-2026 * {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
 /* ========== KWIKK WIDGET STYLING ========== */
 
 /* Main widget background */
@@ -787,9 +812,25 @@ p {
     background: transparent !important;
 }
 
-/* Subtitle text (HANTVERKARE | TIMBERSPORT...) */
-#kwikk_mws_10094_backwoods-2026 > p:first-of-type {
+/* Subtitle text (HANTVERKARE | TIMBERSPORT...) - center the entire header div */
+#kwikk_mws_10094_backwoods-2026 .tag-header {
+    text-align: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto 2rem !important;
+}
+
+#kwikk_mws_10094_backwoods-2026 h3.ql-align-center,
+#kwikk_mws_10094_backwoods-2026 h3.ql-align-center span {
     color: #b1804c !important;
+    font-family: 'Bahianita', 'Impact', sans-serif !important;
+    text-align: center !important;
+    font-size: 1.8rem !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase !important;
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* Ticket titles - brown */
