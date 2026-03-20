@@ -952,6 +952,35 @@ h1, h2, h3,
     background: transparent !important;
 }
 
+/* ========== KWIKK SPACING FIX (from Kwikk support) ========== */
+
+/* Hide empty product containers */
+#kwikk_mws_10094_backwoods-2026 .product-container.product-container-end-wrap {
+    display: none;
+}
+
+/* Hide Kwikk footer elements */
+#kwikk_mws_10094_backwoods-2026 > div.col-12,
+#kwikk_mws_10094_backwoods-2026 > div:last-child,
+#kwikk_mws_10094_backwoods-2026 > div:last-child *,
+#kwikk_mws_10094_backwoods-2026 footer,
+#kwikk_mws_10094_backwoods-2026 footer *,
+#kwikk_mws_10094_backwoods-2026 > p:last-child {
+    display: none !important;
+}
+
+/* Remove bottom margin from Kwikk container */
+section#biljetter .kwikk-container {
+    margin-bottom: 0;
+}
+
+/* Mobile padding adjustment */
+@media (max-width: 899px) {
+    section#biljetter {
+        padding-bottom: 1em;
+    }
+}
+
 /* ========== FOOTER ========== */
 footer {
     padding: 60px 0;
