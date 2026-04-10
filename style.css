@@ -655,6 +655,51 @@ p {
     height: 100%;
 }
 
+/* ========== LIVEBAND SECTION ========== */
+.liveband {
+    padding: 80px 0;
+    background: rgba(10, 10, 10, 0.92);
+    text-align: center;
+}
+
+.liveband h2 {
+    color: #b1814a;
+    margin-bottom: 3rem;
+}
+
+.band-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.band-content h3 {
+    color: #b1814a;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.band-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #f5f5f5;
+}
+
+.band-image {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.band-image img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    border: 3px solid #b1814a;
+    display: block;
+    margin: 0 auto;
+}
+
 /* ========== FÖR HANTVERKARE SECTION ========== */
 .for-craftsmen {
     padding: 80px 0;
