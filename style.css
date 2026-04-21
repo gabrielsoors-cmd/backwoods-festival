@@ -667,19 +667,30 @@ p {
     margin-bottom: 3rem;
 }
 
-.band-content {
-    max-width: 900px;
+.bands-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1400px;
     margin: 0 auto;
+}
+
+.band-card {
+    background: #4c322a;
+    padding: 2.5rem;
+    border-radius: 10px;
+    border: 3px solid #b1814a;
     text-align: center;
 }
 
-.band-content h3 {
+.band-card h3 {
     color: #b1814a;
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+    font-family: 'Bahianita', 'Impact', sans-serif;
 }
 
-.band-content p {
+.band-card p {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
@@ -687,17 +698,21 @@ p {
 }
 
 .band-image {
-    margin: 2rem auto;
-    text-align: center;
+    margin: 2rem 0;
 }
 
 .band-image img {
     width: 100%;
-    max-width: 800px;
     border-radius: 10px;
     border: 3px solid #b1814a;
-    display: block;
-    margin: 0 auto;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .bands-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }
 
 /* ========== FÖR HANTVERKARE SECTION ========== */
