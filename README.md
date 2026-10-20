@@ -28,7 +28,7 @@ Sök efter dessa för att hitta rätt ställe direkt:
 | `BW-PROGRAM` | `program.html` | Årets program: bakgrundsbild och texten på affischen |
 | `BW-BILJETTER` | `biljetter.html` | Biljettsektionen ("släpps snart" eller Kwikk-widgeten) |
 | `BW-EVENT-DATA` | `index.html`, `program.html` | Strukturerad data för Google och AI-sök (datum, plats) |
-| `BW-DATUM` | `js/main.js` | Datumet som nedräkningen på startsidan räknar mot |
+| `BW-DATUM` | `js/main.js` | Datumet (ÅÅÅÅ-MM-DD) som nedräkningen på startsidan räknar mot. Räknar kalenderdagar efter svensk tid och byter siffra vid midnatt |
 | `BW:SIDHUVUD`, `BW:SIDFOT`, `BW:GEMENSAM-HEAD` | alla sidor | Gemensamma delar, se nedan |
 
 ## Gemensam meny och sidfot
@@ -50,7 +50,7 @@ publiceras inte.
 2. I `program.html`, under `BW-PROGRAM`: byt sökvägen i `background-image`
    och uppdatera texten på affischen.
 3. Uppdatera `BW-EVENT-DATA` i `program.html` och `index.html`.
-4. Byt datum överallt (sök på `2027-05-15` och `15 maj 2027`) och i `BW-DATUM`.
+4. Byt datum överallt (sök på `2027-05-15` och `15 maj 2027`), även `BW-DATUM` i `js/main.js`.
 5. Uppdatera `lastmod` i `sitemap.xml` och texten i `llms.txt`.
 
 ## När biljetterna släpps

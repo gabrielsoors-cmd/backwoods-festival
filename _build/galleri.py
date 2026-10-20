@@ -8,6 +8,7 @@ bort en bild där och kör sedan:
     python3 _build/galleri.py
 
 Skriptet skriver om allt mellan
+    <!-- BW-GALLERI-GENVAGAR START --> … <!-- BW-GALLERI-GENVAGAR SLUT --> i galleri.html
     <!-- BW-GALLERI START -->  …  <!-- BW-GALLERI SLUT -->     i galleri.html
     <!-- BW-GALLERI-BILDER START --> … <!-- BW-GALLERI-BILDER SLUT -->  i sitemap.xml
 Kräver Pillow (pip install pillow) för att läsa bildernas mått.
@@ -81,8 +82,20 @@ def main():
                 f'    <image:image><image:loc>{DOMAN}{stor}</image:loc></image:image>'
             )
 
+    genvagar = (
+        '        <nav class="matt galleri-genvagar" aria-label="Bildgrupper">\n'
+        '            <ul>\n'
+        + ''.join(f'                <li><a href="#{g["id"]}">{html.escape(g["rubrik"])}</a></li>\n' for g in data['grupper'])
+        + '            </ul>\n'
+        '        </nav>'
+    )
+
     sida = ROT / 'galleri.html'
     text = sida.read_text(encoding='utf-8')
+    text = re.sub(
+        r'(<!-- BW-GALLERI-GENVAGAR START[^>]*-->\n)(.*?)([ \t]*<!-- BW-GALLERI-GENVAGAR SLUT -->)',
+        lambda m: m.group(1) + genvagar + '\n        ' + m.group(3).strip(),
+        text, flags=re.S)
     ny = re.sub(
         r'(<!-- BW-GALLERI START[^>]*-->\n)(.*?)([ \t]*<!-- BW-GALLERI SLUT -->)',
         lambda m: m.group(1) + '\n\n'.join(delar) + '\n        ' + m.group(3).strip(),

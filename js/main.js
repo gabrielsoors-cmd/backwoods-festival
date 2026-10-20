@@ -12,7 +12,7 @@
 
     /* ---------- Inställningar ---------- */
     var GA_ID = 'G-4Q9FT55M7K';                         // Google Analytics
-    var FESTIVALDAG = new Date('2027-05-15T00:00:00+02:00'); // BW-DATUM: ändra inför nästa år
+    var FESTIVALDATUM = '2027-05-15';                    // BW-DATUM: ändra inför nästa år (ÅÅÅÅ-MM-DD)
     var COOKIE_NYCKEL = 'bw-cookieval';                 // sparar 'ja' eller 'nej'
 
     /* ---------- 1. Mobilmenyn ---------- */
@@ -103,19 +103,39 @@
         }
     });
 
-    /* ---------- 3. Nedräkning ---------- */
+    /* ---------- 3. Nedräkning ----------
+       Räknar hela kalenderdagar kvar till festivalen efter svensk tid,
+       oavsett var besökaren befinner sig. Byter siffra vid midnatt och
+       räknar om sig själv om sidan står öppen över natten. */
     var nedrakning = document.querySelector('[data-nedrakning]');
-    if (nedrakning) {
+
+    function svenskDatumIdag() {
         var nu = new Date();
-        var dagar = Math.ceil((FESTIVALDAG - nu) / 86400000);
+        try {
+            var delar = {};
+            new Intl.DateTimeFormat('sv-SE', {
+                timeZone: 'Europe/Stockholm', year: 'numeric', month: 'numeric', day: 'numeric'
+            }).formatToParts(nu).forEach(function (d) { delar[d.type] = parseInt(d.value, 10); });
+            if (delar.year && delar.month && delar.day) return Date.UTC(delar.year, delar.month - 1, delar.day);
+        } catch (e) { /* äldre webbläsare: använd enhetens datum */ }
+        return Date.UTC(nu.getFullYear(), nu.getMonth(), nu.getDate());
+    }
+
+    function uppdateraNedrakning() {
+        var p = FESTIVALDATUM.split('-');
+        var festivalen = Date.UTC(+p[0], +p[1] - 1, +p[2]);
+        var dagar = Math.round((festivalen - svenskDatumIdag()) / 86400000);
         var text = '';
         if (dagar > 1) text = 'Om ' + dagar + ' dagar drar vi igång.';
         else if (dagar === 1) text = 'I morgon drar vi igång!';
         else if (dagar === 0) text = 'Idag är det Backwoods!';
-        if (text) {
-            nedrakning.textContent = text;
-            nedrakning.hidden = false;
-        }
+        nedrakning.textContent = text;
+        nedrakning.hidden = !text;
+    }
+
+    if (nedrakning) {
+        uppdateraNedrakning();
+        setInterval(uppdateraNedrakning, 10 * 60 * 1000);
     }
 
     /* ---------- 5. Förstora bilder ----------

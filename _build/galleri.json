@@ -6,15 +6,54 @@
       "rubrik": "Hantverkarna",
       "text": "Smeder, svetsare, täljare, korgmakare och konstnärer som jobbade på plats under premiären.",
       "bilder": [
-        { "namn": "backwoods-2026-smed-vid-stadet", "alt": "En smed i hatt och läderförkläde smider på ett städ under Backwoods 2026" },
-        { "namn": "backwoods-2026-svetsning-hastskor", "alt": "En svetsare i målad svetshjälm svetsar ihop hästskor till en skulptur under ett tält på Backwoods 2026" },
-        { "namn": "backwoods-2026-motorsagskonst-bjorn", "alt": "En motorsågskonstnär sågar fram en björn ur en trästock, med sågspån över hela marken, på Backwoods 2026" },
-        { "namn": "backwoods-2026-spankorgar", "alt": "Nytillverkade spånkorgar och högar av träspån vid en hantverkares arbetsplats under Backwoods 2026" },
-        { "namn": "backwoods-2026-smed-med-tang", "alt": "En skäggig smed i hatt, fårskinnsväst och röd halsduk håller upp en smidestång och ler på Backwoods 2026" },
-        { "namn": "backwoods-2026-taljning", "alt": "En ung man täljer i trä med spånen i knät under ett tält på Backwoods 2026" },
-        { "namn": "backwoods-2026-pappersblommor", "alt": "Stora handgjorda pappersblommor på gamla trästegar vid en utställare på Backwoods 2026" },
-        { "namn": "backwoods-2026-orsa-stenhuggeri-montern", "alt": "En utställare bakom sitt bord med sandstensprodukter från Orsa Stenhuggeri i gamla trälådor på Backwoods 2026" },
-        { "namn": "backwoods-2026-hantverk-orsa-stenhuggeri", "alt": "Fotfilar och peelingstenar från Orsa Stenhuggeri i gamla trälådor på ett hantverksbord under Backwoods 2026" }
+        {
+          "namn": "backwoods-2026-smed-vid-stadet",
+          "alt": "En smed i hatt och läderförkläde smider på ett städ under Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-svetsning-hastskor",
+          "alt": "En svetsare i målad svetshjälm svetsar ihop hästskor till en skulptur under ett tält på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-motorsagskonst-bjorn",
+          "alt": "En motorsågskonstnär sågar fram en björn ur en trästock, med sågspån över hela marken, på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-motorsagsskulptur-narbild",
+          "alt": "Närbild på en motorsågskonstnär med hörselskydd som sågar fram en björn ur en trästock på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-spankorgar",
+          "alt": "Nytillverkade spånkorgar och högar av träspån vid en hantverkares arbetsplats under Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-smed-med-tang",
+          "alt": "En skäggig smed i hatt, fårskinnsväst och röd halsduk håller upp en smidestång och ler på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-taljning",
+          "alt": "En ung man täljer i trä med spånen i knät under ett tält på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-pappersblommor",
+          "alt": "Stora handgjorda pappersblommor på gamla trästegar vid en utställare på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-orsa-stenhuggeri-montern",
+          "alt": "En utställare bakom sitt bord med sandstensprodukter från Orsa Stenhuggeri i gamla trälådor på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-hantverk-orsa-stenhuggeri",
+          "alt": "Fotfilar och peelingstenar från Orsa Stenhuggeri i gamla trälådor på ett hantverksbord under Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-omalade-dalahastar",
+          "alt": "Rader av omålade dalahästar i trä på ett bord hos en utställare på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-eld-production-marschallhallare",
+          "alt": "Marschallhållare och dekorationsrutor i stål med kurbitsmönster från ELD Production AB i en utställares tält på Backwoods 2026"
+        }
       ]
     },
     {
@@ -22,13 +61,50 @@
       "rubrik": "Käk och bärs",
       "text": "Mat lagad över öppen eld, och en bar där en uppstoppad björn höll vakt.",
       "bilder": [
-        { "namn": "backwoods-2026-bjorn-pa-baren", "alt": "En uppstoppad björn står på en jutetäckt kyl ovanpå baren på Backwoods 2026, med ljusslingor och sågverkets stålbalkar bakom" },
-        { "namn": "backwoods-2026-matlagning-over-eld", "alt": "Matlagning i stekpannor över öppen eld i en eldstad, med en röd lada i bakgrunden, på Backwoods 2026" },
-        { "namn": "backwoods-2026-ko-vid-baren", "alt": "Besökare i regnjackor köar vid baren under den uppstoppade björnen på Backwoods 2026" },
-        { "namn": "backwoods-2026-kockar-vid-elden", "alt": "Två kockar steker mat i pannor över en öppen eldstad på Backwoods 2026" },
-        { "namn": "backwoods-2026-burgare-och-bars", "alt": "En besökare håller upp en burgare i pappersbåt och en flaska öl på Backwoods 2026" },
-        { "namn": "backwoods-2026-matstand-under-sagverkstaket", "alt": "Besökare vid matståndet med rostig plåtdisk under sågverkets plåttak på Backwoods 2026" },
-        { "namn": "backwoods-2026-skottkarra-med-ved", "alt": "En man i orange jacka med en skottkärra full av ved under sågverkstaket på Backwoods 2026, med baren och den uppstoppade björnen bakom" }
+        {
+          "namn": "backwoods-2026-bjorn-pa-baren",
+          "alt": "En uppstoppad björn står på en jutetäckt kyl ovanpå baren på Backwoods 2026, med ljusslingor och sågverkets stålbalkar bakom"
+        },
+        {
+          "namn": "backwoods-2026-matlagning-over-eld",
+          "alt": "Matlagning i stekpannor över öppen eld i en eldstad, med en röd lada i bakgrunden, på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-ko-vid-baren",
+          "alt": "Besökare i regnjackor köar vid baren under den uppstoppade björnen på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-kockar-vid-elden",
+          "alt": "Två kockar steker mat i pannor över en öppen eldstad på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-burgare-och-bars",
+          "alt": "En besökare håller upp en burgare i pappersbåt och en flaska öl på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-matstand-under-sagverkstaket",
+          "alt": "Besökare vid matståndet med rostig plåtdisk under sågverkets plåttak på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-skottkarra-med-ved",
+          "alt": "En man i orange jacka med en skottkärra full av ved under sågverkstaket på Backwoods 2026, med baren och den uppstoppade björnen bakom"
+        },
+        {
+          "namn": "backwoods-2026-jillie-ren-och-vilt",
+          "alt": "Besökare i regnkläder handlar i tältet hos Jillie Ren & Vilt från Ljusnedal på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-smakprov-torkat-kott",
+          "alt": "En besökare får ett smakprov på torkat kött från knivspetsen hos Jillie Ren & Vilt på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-baren-i-kvallssol",
+          "alt": "Besökare i cowboyhatt och flanellskjorta vid baren, med menyn uppklämd på armeringsnät i kvällssolen, på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-bardisken-pa-kvallen",
+          "alt": "Besökare och personal vid den långa bardisken med ölflaskor och björkris i kvällssolen på Backwoods 2026"
+        }
       ]
     },
     {
@@ -36,21 +112,96 @@
       "rubrik": "Folket",
       "text": "Det hällregnade. Folk kom ändå.",
       "bilder": [
-        { "namn": "backwoods-2026-skrattande-besokare", "alt": "Två festivalbesökare skrattar tillsammans på Backwoods 2026, den ena i cowboyhatt med en ölflaska i handen" },
-        { "namn": "backwoods-2026-cowboyhatt-och-flanell", "alt": "Ett par ler mot kameran på Backwoods 2026, han i cowboyhatt och rutig flanellskjorta" },
-        { "namn": "backwoods-2026-paraplyer-i-regnet", "alt": "Besökare med paraplyer i regnet mellan utställartälten på Rotsågen, med en skylt mot pickuputställningen och en eldkorg i förgrunden" },
-        { "namn": "backwoods-2026-besokare-i-regnstall", "alt": "Två besökare i regnställ och kepsar ler mot kameran på Backwoods 2026" },
-        { "namn": "backwoods-2026-soffan-vid-dj-baset", "alt": "Två personer i orange västar och kepsar sitter i en brun 70-talssoffa framför DJ-båset på Backwoods 2026, den ena med en mikrofon" }
+        {
+          "namn": "backwoods-2026-skrattande-besokare",
+          "alt": "Två festivalbesökare skrattar tillsammans på Backwoods 2026, den ena i cowboyhatt med en ölflaska i handen"
+        },
+        {
+          "namn": "backwoods-2026-dans-vid-langborden",
+          "alt": "Ett par dansar med ölflaskor i händerna framför långborden under tältet på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-eld-i-gammalt-badkar",
+          "alt": "Två besökare i regnjackor skrattar och värmer sig vid en eld i ett gammalt badkar under ett tält på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-skal-under-sagverkstaket",
+          "alt": "Två festivalbesökare i truckerkepsar skålar med ölflaskor under sågverkstaket, med den uppstoppade björnen i bakgrunden, på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-eld-i-kvarnsten",
+          "alt": "Besökare samlas kring en eld i en gammal kvarnsten, speglad i en vattenpöl, framför sågverket på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-leende-vid-langbordet",
+          "alt": "En leende besökare vid ett långbord bland folk i truckerkepsar under kvällen på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-cowboyhatt-och-flanell",
+          "alt": "Ett par ler mot kameran på Backwoods 2026, han i cowboyhatt och rutig flanellskjorta"
+        },
+        {
+          "namn": "backwoods-2026-paraplyer-i-regnet",
+          "alt": "Besökare med paraplyer i regnet mellan utställartälten på Rotsågen, med en skylt mot pickuputställningen och en eldkorg i förgrunden"
+        },
+        {
+          "namn": "backwoods-2026-besokare-i-regnstall",
+          "alt": "Två besökare i regnställ och kepsar ler mot kameran på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-soffan-vid-dj-baset",
+          "alt": "Två personer i orange västar och kepsar sitter i en brun 70-talssoffa framför DJ-båset på Backwoods 2026, den ena med en mikrofon"
+        }
       ]
     },
     {
       "id": "musik",
       "rubrik": "Musik",
-      "text": "Dragspel under sågverkstaket, DJ och konsert på kvällen.",
+      "text": "Kepsfolket med dragspel, Östen med Resten i kvällssolen och konsert när det mörknade.",
       "bilder": [
-        { "namn": "backwoods-2026-kepsfolket-pa-scenen", "alt": "Kepsfolket spelar dragspel på scenen under sågverkstaket på Backwoods 2026" },
-        { "namn": "backwoods-2026-konsert-pa-kvallen", "alt": "Publiken framför scenen i orange scenljus under kvällskonserten på Backwoods 2026" },
-        { "namn": "backwoods-2026-dj-skivspelare", "alt": "En skivspelare med texten Yes sir, I can boogie på skivmattan vid DJ-båset på Backwoods 2026" }
+        {
+          "namn": "backwoods-2026-osten-med-resten-pa-scenen",
+          "alt": "Östen med Resten spelar kontrabas och gitarr och sjunger på scenen under ett tält, med publiken i förgrunden, på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-osten-med-resten-mandolin-och-fiol",
+          "alt": "Två medlemmar i Östen med Resten spelar mandolin och fiol på scenen i kvällssolen på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-kepsfolket-pa-scenen",
+          "alt": "Kepsfolket spelar dragspel på scenen under sågverkstaket på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-konsert-pa-kvallen",
+          "alt": "Publiken framför scenen i orange scenljus under kvällskonserten på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-dj-skivspelare",
+          "alt": "En skivspelare med texten Yes sir, I can boogie på skivmattan vid DJ-båset på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-konsert-i-gront-scenljus",
+          "alt": "Ett band spelar i grönt scenljus under sågverkstaket inför en tät publik på kvällen under Backwoods 2026"
+        }
+      ]
+    },
+    {
+      "id": "natten",
+      "rubrik": "Natten på Rotsågen",
+      "text": "När det mörknade lyste sågverkstaket i rött och lila, och folk stannade kvar.",
+      "bilder": [
+        {
+          "namn": "backwoods-2026-langbord-och-bar-i-lila-ljus",
+          "alt": "Besökare vid långborden och baren under det lila upplysta sågverkstaket på natten, med scenen i bakgrunden, på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-rott-ljus-och-bjornen",
+          "alt": "Tät publik under det rött upplysta sågverkstaket på natten, med den uppstoppade björnen ovanpå baren, på Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-natt-under-sagverkstaket",
+          "alt": "Publik under det lila upplysta sågverkstaket på natten, med scenen till vänster och ljusslingor över festivalområdet, på Backwoods 2026"
+        }
       ]
     },
     {
@@ -58,10 +209,30 @@
       "rubrik": "Rotsågen och pickuperna",
       "text": "Det nedlagda sågverket i Rot, fullt av gamla amerikanare.",
       "bilder": [
-        { "namn": "backwoods-rotsagen-i-motljus", "alt": "Sågverkstaket på Rotsågen i siluett mot kvällssolen, med dimma mellan tallarna" },
-        { "namn": "backwoods-2026-pickuper-i-regnet", "alt": "Gamla amerikanska pickuper, bland annat en svart och en röd Chevrolet, parkerade i regnet på Rotsågen" },
-        { "namn": "backwoods-2026-veteranbil-vid-sagen", "alt": "En blå veteranbil framför besökare och sågverkets tak på Rotsågen under Backwoods 2026" },
-        { "namn": "backwoods-2026-pickuper-i-dimman", "alt": "En rad gamla pickuper på festivalområdet i dimman under Backwoods 2026" }
+        {
+          "namn": "backwoods-rotsagen-i-motljus",
+          "alt": "Sågverkstaket på Rotsågen i siluett mot kvällssolen, med dimma mellan tallarna"
+        },
+        {
+          "namn": "backwoods-rotsagen-skog-i-dimma",
+          "alt": "Motljus och dimma mellan tallarna i skogen vid Rotsågen i Rot, Älvdalen"
+        },
+        {
+          "namn": "backwoods-2026-pickuper-i-regnet",
+          "alt": "Gamla amerikanska pickuper, bland annat en svart och en röd Chevrolet, parkerade i regnet på Rotsågen"
+        },
+        {
+          "namn": "backwoods-2026-veteranbil-vid-sagen",
+          "alt": "En blå veteranbil framför besökare och sågverkets tak på Rotsågen under Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-pickuper-i-dimman",
+          "alt": "En rad gamla pickuper på festivalområdet i dimman under Backwoods 2026"
+        },
+        {
+          "namn": "backwoods-2026-regn-pa-rostig-oljetunna",
+          "alt": "Regndroppar bildar ringar i vattnet på locket till en rostig röd oljetunna under Backwoods 2026"
+        }
       ]
     }
   ]
