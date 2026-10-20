@@ -4,6 +4,7 @@
    2. Cookie-samtycke (Google Analytics laddas först efter "ja")
    3. Nedräkning till festivalen
    4. Kartan (laddas först vid klick)
+   5. Förstora bilder (galleriet)
    ========================================================================== */
 
 (function () {
@@ -115,6 +116,85 @@
             nedrakning.textContent = text;
             nedrakning.hidden = false;
         }
+    }
+
+    /* ---------- 5. Förstora bilder ----------
+       Alla länkar med data-forstora öppnas i en ruta i stället för att
+       lämna sidan. Pilar, svep och piltangenter bläddrar, Esc stänger. */
+    var forstoraLankar = Array.prototype.slice.call(document.querySelectorAll('a[data-forstora]'));
+    if (forstoraLankar.length && typeof HTMLDialogElement === 'function') {
+        var ruta2 = document.createElement('dialog');
+        ruta2.className = 'ljuslada';
+        ruta2.setAttribute('aria-label', 'Förstorad bild');
+        ruta2.innerHTML =
+            '<div class="ljuslada-topp">' +
+                '<span class="ljuslada-raknare" aria-live="polite"></span>' +
+                '<button type="button" class="ljuslada-stang" data-stang>Stäng ✕</button>' +
+            '</div>' +
+            '<figure><img alt=""><figcaption></figcaption></figure>' +
+            '<div class="ljuslada-nav">' +
+                '<button type="button" data-steg="-1">‹ Föregående</button>' +
+                '<button type="button" data-steg="1">Nästa ›</button>' +
+            '</div>';
+        document.body.appendChild(ruta2);
+
+        var storBild = ruta2.querySelector('img');
+        var bildtext = ruta2.querySelector('figcaption');
+        var raknare = ruta2.querySelector('.ljuslada-raknare');
+        var aktuell = 0;
+        var oppnadFran = null;
+
+        function visa(index) {
+            aktuell = (index + forstoraLankar.length) % forstoraLankar.length;
+            var lank = forstoraLankar[aktuell];
+            var liten = lank.querySelector('img');
+            var text = liten ? liten.getAttribute('alt') : '';
+            storBild.src = lank.getAttribute('href');
+            storBild.alt = text;
+            bildtext.textContent = text;
+            raknare.textContent = 'Bild ' + (aktuell + 1) + ' av ' + forstoraLankar.length;
+        }
+
+        function oppna(index, fran) {
+            oppnadFran = fran || null;
+            visa(index);
+            document.documentElement.classList.add('ljuslada-oppen');
+            ruta2.showModal();
+        }
+
+        ruta2.addEventListener('close', function () {
+            document.documentElement.classList.remove('ljuslada-oppen');
+            storBild.removeAttribute('src');
+            if (oppnadFran) oppnadFran.focus();
+        });
+
+        forstoraLankar.forEach(function (lank, i) {
+            lank.addEventListener('click', function (e) {
+                e.preventDefault();
+                oppna(i, lank);
+            });
+        });
+
+        ruta2.addEventListener('click', function (e) {
+            var steg = e.target.closest('[data-steg]');
+            if (steg) { visa(aktuell + parseInt(steg.getAttribute('data-steg'), 10)); return; }
+            if (e.target.closest('[data-stang]') || e.target === ruta2) ruta2.close();
+        });
+
+        ruta2.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowRight') { e.preventDefault(); visa(aktuell + 1); }
+            if (e.key === 'ArrowLeft') { e.preventDefault(); visa(aktuell - 1); }
+        });
+
+        // Svep på mobilen
+        var startX = null;
+        ruta2.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+        ruta2.addEventListener('touchend', function (e) {
+            if (startX === null) return;
+            var dx = e.changedTouches[0].clientX - startX;
+            if (Math.abs(dx) > 50) visa(aktuell + (dx < 0 ? 1 : -1));
+            startX = null;
+        });
     }
 
     /* ---------- 4. Kartan ---------- */

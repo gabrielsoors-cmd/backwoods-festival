@@ -801,3 +801,145 @@ figcaption {
         background: linear-gradient(to top, rgba(28, 19, 13, 0.92) 0%, rgba(28, 19, 13, 0.45) 40%, rgba(28, 19, 13, 0) 75%);
     }
 }
+
+/* ---------- 13. BILDGALLERIET OCH FÖRSTORING ---------- */
+
+/* Klickbara bilder: förstoras i en ruta (js/main.js). Utan JS öppnas bilden direkt. */
+.forstora {
+    display: block;
+    cursor: zoom-in;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.forstora img { transition: transform 0.25s ease; }
+.forstora:hover img { transform: scale(1.03); }
+@media (prefers-reduced-motion: reduce) {
+    .forstora img { transition: none; }
+    .forstora:hover img { transform: none; }
+}
+
+/* Startsidans galleri: länken tar platsen i rutnätet */
+.galleri .forstora { height: 100%; }
+.galleri .forstora img { width: 100%; height: 100%; object-fit: cover; }
+
+.mer-bilder {
+    display: inline-block;
+    margin-top: 1.75rem;
+    font-family: var(--font-rubrik);
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--tan);
+    text-decoration: none;
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 0.1em;
+}
+.mer-bilder:hover { color: var(--tan-ljus); }
+
+/* Galleri-sidan: murverk med bildernas egna proportioner */
+.murverk {
+    columns: 2;
+    column-gap: 6px;
+    margin-top: 2rem;
+}
+.murverk .forstora {
+    break-inside: avoid;
+    margin-bottom: 6px;
+}
+.murverk img { width: 100%; }
+
+@media (min-width: 640px) {
+    .murverk { columns: 3; column-gap: 10px; }
+    .murverk .forstora { margin-bottom: 10px; }
+}
+
+.galleri-grupp { padding-block: clamp(3rem, 8vw, 5rem); }
+
+.galleri-genvagar { padding-block: 1.5rem 0; }
+.galleri-genvagar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.4rem;
+}
+.galleri-genvagar a {
+    font-family: var(--font-rubrik);
+    font-size: 1.6rem;
+    color: var(--dimma);
+    text-decoration: none;
+}
+.galleri-genvagar a:hover { color: var(--tan); }
+
+/* Förstoringsrutan */
+.ljuslada {
+    width: 100vw;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: rgba(20, 13, 9, 0.97);
+    color: var(--dimma);
+}
+.ljuslada::backdrop { background: rgba(20, 13, 9, 0.85); }
+.ljuslada[open] {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+.ljuslada-topp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem var(--kant);
+}
+.ljuslada-raknare { color: var(--dimma-dov); font-size: 0.95rem; }
+.ljuslada figure {
+    margin: 0;
+    min-height: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    justify-items: center;
+    padding: 0 var(--kant);
+}
+.ljuslada img {
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 0;
+    object-fit: contain;
+    align-self: center;
+}
+.ljuslada figcaption {
+    max-width: 60ch;
+    text-align: center;
+    margin: 0.75rem auto 0;
+    color: var(--dimma);
+    font-size: 0.95rem;
+}
+.ljuslada-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem var(--kant) 1.25rem;
+}
+.ljuslada button {
+    background: none;
+    border: 2px solid var(--dimma);
+    color: var(--dimma);
+    font-family: var(--font-rubrik);
+    font-size: 1.6rem;
+    line-height: 1;
+    padding: 0.45em 0.9em 0.35em;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.ljuslada button:hover { background: var(--dimma); color: var(--bark); }
+.ljuslada .ljuslada-stang { border-color: transparent; padding-inline: 0.2em; }
+.ljuslada .ljuslada-stang:hover { background: none; color: var(--tan); }
+html.ljuslada-oppen { overflow: hidden; }
+
+/* Stor anmälningsknapp högst upp på Utställare */
+.knapp--stor { font-size: clamp(2rem, 6vw, 2.6rem); padding: 0.55em 1.2em 0.45em; }
+.sidbild .knapprad { margin-top: 1.5rem; }
+.sidbild .liten-hjalp { font-size: 1rem; color: var(--dimma); margin-top: 0.9rem; }

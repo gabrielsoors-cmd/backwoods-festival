@@ -14,6 +14,7 @@ går live direkt på https://backwoodsfestival.se.
 | `hitta-hit.html` | Hitta hit (karta, vägbeskrivning, vanliga frågor) |
 | `om-oss.html` | Om oss (historia, team, press, kontakt) |
 | `utstallare.html` | Utställare |
+| `galleri.html` | Bilder från 2026 (byggs från `_build/galleri.json`) |
 | `integritet.html`, `cookies.html` | Policysidor |
 | `404.html` | Visas när en sida saknas (använder absoluta sökvägar) |
 | `kontakt.html` | Gammal adress, skickar vidare till `om-oss.html#kontakt` |
@@ -56,6 +57,14 @@ publiceras inte.
 
 Steg för steg står i kommentaren under `BW-BILJETTER` i `biljetter.html`.
 Kwikk-stilarna ligger i `css/kwikk.css` och laddas bara på biljettsidan.
+
+## Bildgalleriet
+
+Bilderna på `galleri.html` och deras alt-texter står i `_build/galleri.json`,
+grupperade under rubriker. Lägg till en bild där och kör
+`python3 _build/galleri.py`. Skriptet bygger galleriet och bildlistan i
+`sitemap.xml`. Alla länkar med `data-forstora` (även startsidans galleri)
+öppnas förstorade i en ruta.
 
 ## Bilder
 

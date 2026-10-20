@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://backwoodsfestival.se/</loc>
     <lastmod>2026-10-20</lastmod>
@@ -29,6 +30,41 @@
     <loc>https://backwoodsfestival.se/utstallare.html</loc>
     <lastmod>2026-10-20</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://backwoodsfestival.se/galleri.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <priority>0.7</priority>
+    <!-- BW-GALLERI-BILDER START -->
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-smed-vid-stadet-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-svetsning-hastskor-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-motorsagskonst-bjorn-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-spankorgar-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-smed-med-tang-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-taljning-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-pappersblommor-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-orsa-stenhuggeri-montern-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-hantverk-orsa-stenhuggeri-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-bjorn-pa-baren-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-matlagning-over-eld-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-ko-vid-baren-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-kockar-vid-elden-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-burgare-och-bars-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-matstand-under-sagverkstaket-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-skottkarra-med-ved-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-skrattande-besokare-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-cowboyhatt-och-flanell-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-paraplyer-i-regnet-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-besokare-i-regnstall-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-soffan-vid-dj-baset-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-kepsfolket-pa-scenen-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-konsert-pa-kvallen-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-dj-skivspelare-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-rotsagen-i-motljus-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-pickuper-i-regnet-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-veteranbil-vid-sagen-2400.webp</image:loc></image:image>
+    <image:image><image:loc>https://backwoodsfestival.se/images/foto/backwoods-2026-pickuper-i-dimman-2400.webp</image:loc></image:image>
+    <!-- BW-GALLERI-BILDER SLUT -->
   </url>
   <url>
     <loc>https://backwoodsfestival.se/integritet.html</loc>
