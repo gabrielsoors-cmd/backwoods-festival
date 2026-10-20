@@ -1,0 +1,202 @@
+/* ==========================================================================
+   KWIKK – STILAR FÖR BILJETTWIDGETEN
+   Laddas bara på biljetter.html när biljetterna är släppta.
+
+   Reglerna är flyttade oförändrade från den gamla sajten (justerade med hjälp
+   av Kwikks support). Widgetens ID står i :is(...) nedan – får 2027 års butik
+   ett annat ID, lägg till det där. Kontrollera utseendet när widgeten är live.
+   ========================================================================== */
+
+.kwikk-container {
+    width: min(var(--bredd), 100% - 2 * var(--kant));
+    margin: 3rem auto 0;
+    background: var(--bark-2);
+    padding: 1.5rem;
+    border-radius: 2px;
+}
+
+/* Keep Kwikk with its own fonts */
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027),
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) * {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* ========== KWIKK WIDGET STYLING ========== */
+
+/* Main widget background */
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) {
+    background: transparent !important;
+}
+
+/* Header section */
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) h1,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) h2 {
+    color: #b1804c !important;
+    font-family: 'Bahianita', 'Impact', sans-serif !important;
+    background: transparent !important;
+}
+
+/* Subtitle text (HANTVERKARE | TIMBERSPORT...) - center the entire header div */
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .tag-header {
+    text-align: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto 2rem !important;
+}
+
+/* ========== BACKWOODS STYLE FOR TICKET CARDS ========== */
+
+/* Target the actual ticket card containers */
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body {
+    background: #4c322a !important;
+    border: 3px solid #b1814a !important;
+    border-radius: 10px !important;
+    padding: 2rem !important;
+}
+
+/* Ticket titles - gold in Bahianita */
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body h3 {
+    color: #b1814a !important;
+    font-family: 'Bahianita', 'Impact', sans-serif !important;
+    font-size: 1.8rem !important;
+}
+
+/* Description text - white */
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body p {
+    color: #f5f5f5 !important;
+}
+
+/* Price - gold and bold - using exact Kwikk classes */
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body strong,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body .price-tag,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body .price-btn,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body [class*="price"] {
+    color: #b1814a !important;
+    font-weight: bold !important;
+    font-size: 2rem !important;
+    background: transparent !important;
+}
+
+/* Buttons - FORCE gold using Kwikk's comet__btn class */
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body .comet__btn,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body .comet_wrap,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body div[role="button"],
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body a,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body button {
+    background: #b1814a !important;
+    background-color: #b1814a !important;
+    color: #0a0a0a !important;
+    font-family: 'Bahianita', 'Impact', sans-serif !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    font-weight: bold !important;
+    font-size: 1.4rem !important;
+    border: none !important;
+    padding: 1rem 2rem !important;
+    border-radius: 50px !important;
+}
+
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body .comet__btn *,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body div[role="button"] *,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body a *,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body button * {
+    color: #0a0a0a !important;
+}
+
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body .comet__btn:hover,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body a:hover,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body button:hover {
+    background: #d19d5e !important;
+    transform: scale(1.05) !important;
+}
+
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body a *,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body button * {
+    color: #0a0a0a !important;
+}
+
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body a:hover,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .item-body button:hover {
+    background: #d19d5e !important;
+    transform: scale(1.05) !important;
+}
+
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) h3.ql-align-center,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) h3.ql-align-center span {
+    color: #b1804c !important;
+    font-family: 'Bahianita', 'Impact', sans-serif !important;
+    text-align: center !important;
+    font-size: 1.8rem !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase !important;
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Ticket titles - brown */
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) h3 {
+    color: #b1804c !important;
+}
+
+/* Description text ONLY in ticket cards - BLACK */
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) [class*="card"] p,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) [class*="ticket"] p,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) [class*="card"] div:not(a):not(button),
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) [class*="ticket"] div:not(a):not(button) {
+    color: #0a0a0a !important;
+}
+
+/* Price - black and bold */
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) strong,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) [class*="price"],
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) [class*="cost"],
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) [class*="card"] strong,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) [class*="ticket"] strong {
+    color: #0a0a0a !important;
+    font-weight: bold !important;
+    background: transparent !important;
+}
+
+/* ALL buttons and links - WHITE text */
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) a,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) button,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) a *,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) button * {
+    color: #ffffff !important;
+}
+
+/* Footer text (Kwikk logo etc) - WHITE */
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) > div:last-child,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) > div:last-child *,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) footer,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) footer *,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) > p:last-child {
+    color: #ffffff !important;
+    background: transparent !important;
+}
+
+/* ========== KWIKK SPACING FIX (from Kwikk support) ========== */
+
+/* Hide empty product containers */
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) .product-container.product-container-end-wrap {
+    display: none;
+}
+
+/* Hide Kwikk footer elements */
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) > div.col-12,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) > div:last-child,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) > div:last-child *,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) footer,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) footer *,
+:is(#kwikk_mws_10094_backwoods-2026, #kwikk_mws_10094_backwoods-2027) > p:last-child {
+    display: none !important;
+}
+
+
+/* Mobile padding adjustment */
+@media (max-width: 899px) {
+    section#biljetter {
+        padding-bottom: 1em;
+    }
+}

@@ -1,85 +1,169 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+    <!-- BW:GEMENSAM-HEAD START -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Q9FT55M7K"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-4Q9FT55M7K');
-    </script>
-    
-    <title>Biljetter | Backwoods Festival 2026</title>
-    <meta name="description" content="Köp biljetter till Backwoods Festival 2026 i Älvdalen. Dagspass och kvällspass tillgängliga!">
-    
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Bahianita&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1c130d">
+    <link rel="preload" href="fonts/bahianita-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/courier-prime-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- BW:GEMENSAM-HEAD SLUT -->
+    <title>Biljetter | Backwoods Festival 2027, Älvdalen</title>
+    <meta name="description" content="Biljetterna till Backwoods Festival 2027, lördag 15 maj på Rotsågen i Rot, Älvdalen, släpps snart. Följ oss på Instagram så missar du inte släppet.">
+    <link rel="canonical" href="https://backwoodsfestival.se/biljetter.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta property="og:site_name" content="Backwoods Festival">
+    <meta property="og:title" content="Biljetter till Backwoods Festival 2027 släpps snart">
+    <meta property="og:description" content="Lördag 15 maj 2027 på Rotsågen i Rot, Älvdalen. Följ oss på Instagram så missar du inte släppet.">
+    <meta property="og:url" content="https://backwoodsfestival.se/biljetter.html">
+    <meta property="og:image" content="https://backwoodsfestival.se/images/og-backwoods-2027.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- När biljetterna släpps: avkommentera raden nedan (stilar för Kwikk-widgeten) -->
+    <!-- <link rel="stylesheet" href="css/kwikk.css"> -->
 </head>
 <body>
-
-    <!-- Fixed Background Layer -->
-    <div class="fixed-background"></div>
-
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="index.html">
-                <img src="images/logo-header.png" alt="Backwoods Festival Logotyp" class="nav-logo">
+    <!-- BW:SIDHUVUD START -->
+    <a class="hoppa-till" href="#innehall">Hoppa till innehållet</a>
+    <header class="sidhuvud-nav">
+        <div class="matt">
+            <a class="logga-lank" href="./" aria-label="Backwoods Festival, till startsidan">
+                <img src="images/backwoods-logga-liggande.webp" alt="Backwoods Festival" width="480" height="120">
             </a>
-            <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html#hem">Hem</a></li>
-                <li><a href="biljetter.html">Biljetter</a></li>
-                <li><a href="index.html#plats">Hitta hit</a></li>
-                <li><a href="kontakt.html">Kontakta oss</a></li>
-            </ul>
+            <button class="meny-knapp" type="button" aria-expanded="false" aria-controls="huvudmeny"><span class="streck" aria-hidden="true"></span>Meny</button>
+            <nav id="huvudmeny" class="huvudmeny" aria-label="Huvudmeny">
+                <ul>
+                    <li><a href="./" data-sida="index.html">Hem</a></li>
+                    <li class="meny-biljetter"><a href="biljetter.html" data-sida="biljetter.html" aria-current="page">Biljetter</a></li>
+                    <li><a href="program.html" data-sida="program.html">Årets program</a></li>
+                    <li><a href="hitta-hit.html" data-sida="hitta-hit.html">Hitta hit</a></li>
+                    <li><a href="om-oss.html" data-sida="om-oss.html">Om oss</a></li>
+                    <li><a href="utstallare.html" data-sida="utstallare.html">Utställare</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
+    <!-- BW:SIDHUVUD SLUT -->
 
-    <!-- Biljetter Page -->
-    <section class="tickets-page">
-        <div class="container">
-            <h1>BILJETTER</h1>
-            <p class="tickets-intro">Dagspass med TIMBERSPORTS® och live-musik eller kvällspass med artist och DJ?</p>
-            <p class="tickets-intro"><strong>Varför välja? Kör båda två till rabbaterat pris!</strong></p>
-            
-            <!-- Kwikk Ticket Widget -->
-            <div class="kwikk-container">
-                <script src="https://butik.kwikk.se/10094/backwoods-2026/kwikk.inline_mws.js"></script>
-                <div id="kwikk_mws_10094_backwoods-2026"></div>
+    <main id="innehall">
+
+        <!-- ==================================================================
+             BW-BILJETTER START  ·  Biljettsektionen
+
+             JUST NU: affischen "Biljetter släpps snart!" visas.
+
+             NÄR BILJETTERNA SLÄPPS:
+               1. Ta bort affischen (<div class="natet"> … </div>) nedan.
+               2. Avkommentera Kwikk-blocket längst ner i sektionen och
+                  kontrollera butiks-ID:t med Kwikk (2026 hette det
+                  10094/backwoods-2026). ID:t står på två ställen.
+               3. Avkommentera css/kwikk.css i <head> och lägg till det nya
+                  ID:t överst i css/kwikk.css.
+               4. Byt "Biljetter släpps snart" till "Köp biljett" i
+                  index.html (två knappar).
+               5. Lägg till "offers" (pris, länk) i BW-EVENT-DATA i index.html.
+             ================================================================== -->
+        <section class="affisch-scen" id="biljetter" aria-labelledby="biljetter-rubrik"
+                 style="background-image: url('images/foto/backwoods-2026-skrattande-besokare-1600.webp')">
+
+            <div class="natet">
+                <article class="affisch">
+                    <h1 class="affisch-titel" id="biljetter-rubrik">Biljetter släpps snart!</h1>
+                    <p class="affisch-undertitel">
+                        Backwoods Festival 2027<br>
+                        <time datetime="2027-05-15">Lördag 15 maj</time> på Rotsågen i Rot, Älvdalen
+                    </p>
+                    <div class="affisch-pass">
+                        <p>Vi lägger sista handen vid biljetterna just nu. Följ oss på Instagram, så får du veta först när de släpps.</p>
+                        <div class="knapprad">
+                            <a class="knapp knapp--mork" href="https://www.instagram.com/backwoods_festival/" rel="noopener">Följ @backwoods_festival</a>
+                        </div>
+                    </div>
+                    <div class="affisch-fot">
+                        <p>Frågor om biljetter? Mejla <a href="mailto:hej@backwoodsfestival.se?subject=Fr%C3%A5ga%20om%20biljetter%20%E2%80%93%20Backwoods%202027">hej@backwoodsfestival.se</a>.</p>
+                    </div>
+                </article>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p><a href="integritet.html">Integritetspolicy</a> | <a href="cookies.html">Cookie-policy</a></p>
-            <p>&copy; 2026 Backwoods Festival. All rights reserved.</p>
+            <!-- Kwikk-widgeten. Avkommentera när biljetterna släpps (se steg 2 ovan).
+            <div class="matt kwikk-container">
+                <script src="https://butik.kwikk.se/10094/backwoods-2027/kwikk.inline_mws.js"></script>
+                <div id="kwikk_mws_10094_backwoods-2027"></div>
+            </div>
+            -->
+        </section>
+        <!-- BW-BILJETTER SLUT ================================================ -->
+
+        <section class="sektion">
+            <div class="matt">
+                <h2>Medan du väntar</h2>
+                <p>Kolla vad som händer under dagen och kvällen, och planera resan till Rot.</p>
+                <div class="knapprad">
+                    <a class="knapp" href="program.html">Se programmet</a>
+                    <a class="knapp knapp--linje" href="hitta-hit.html">Hitta hit</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- BW:SIDFOT START -->
+    <footer class="sidfot">
+        <div class="matt">
+            <div class="sidfot-grid">
+                <div>
+                    <img src="images/backwoods-logga-liggande.webp" alt="Backwoods Festival" width="480" height="120" loading="lazy">
+                    <p>Hantverksfestivalen på Rotsågen i Rot, Älvdalen.</p>
+                    <p>Lördag 15 maj 2027</p>
+                </div>
+                <div>
+                    <h2>Festivalen</h2>
+                    <ul>
+                        <li><a href="biljetter.html">Biljetter</a></li>
+                        <li><a href="program.html">Årets program</a></li>
+                        <li><a href="hitta-hit.html">Hitta hit</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Mer</h2>
+                    <ul>
+                        <li><a href="om-oss.html">Om oss</a></li>
+                        <li><a href="utstallare.html">Utställare</a></li>
+                        <li><a href="om-oss.html#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Hör av dig</h2>
+                    <ul>
+                        <li><a href="mailto:hej@backwoodsfestival.se">hej@backwoodsfestival.se</a></li>
+                        <li><a href="https://www.instagram.com/backwoods_festival/" rel="noopener">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidfot-botten">
+                <p>Bilderna är från Backwoods 2026. Foto: Tobbe Nilsson m.fl.</p>
+                <p>&copy; 2026 Backwoods Festival. <a href="integritet.html">Integritetspolicy</a>. <a href="cookies.html">Cookies</a>. <button type="button" class="sidfot-knapp" data-cookie="andra">Ändra cookie-val</button></p>
+            </div>
         </div>
     </footer>
 
-    <!-- Cookie Banner -->
-    <div id="cookie-banner" class="cookie-banner">
-        <div class="cookie-content">
-            <p>Vi använder cookies för att förbättra din upplevelse och analysera trafik. Genom att fortsätta använda sidan godkänner du vår användning av cookies.</p>
-            <div class="cookie-buttons">
-                <a href="cookies.html" class="cookie-link">Läs mer</a>
-                <button id="accept-cookies" class="cookie-accept">Acceptera</button>
+    <div id="cookie-ruta" class="cookie-ruta" role="region" aria-label="Cookie-val" hidden>
+        <div class="innehall">
+            <p>Får vi använda Google Analytics för att se hur sajten används? Det sätter några cookies. Säger du nej funkar allt precis likadant. <a href="cookies.html">Läs mer om cookies</a></p>
+            <div class="knapprad">
+                <button type="button" class="knapp" data-cookie="ja">Ja, det går bra</button>
+                <button type="button" class="knapp knapp--linje" data-cookie="nej">Nej tack</button>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
-
+    <script src="js/main.js" defer></script>
+    <!-- BW:SIDFOT SLUT -->
 </body>
 </html>

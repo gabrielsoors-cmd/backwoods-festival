@@ -1,0 +1,803 @@
+/* ==========================================================================
+   BACKWOODS FESTIVAL – STILMALL
+   Hantverksfestivalen på Rotsågen i Rot, Älvdalen.
+
+   Upplägg (mobile first – grundreglerna gäller mobil, @media lägger på för
+   större skärmar):
+     1. Designtokens (färger, typsnitt, mått) – ändra här, inte i komponenter
+     2. Typsnitt (självhostade i /fonts)
+     3. Grund
+     4. Knappar och länkar
+     5. Sidhuvud och meny
+     6. Hero (startsidan) och sidhuvud-bild (undersidor)
+     7. Sektioner och innehåll
+     8. Affischen på armeringsnätet (program + biljetter)
+     9. Galleri
+    10. Sidfot
+    11. Cookie-ruta
+    12. Policysidor och 404
+   ========================================================================== */
+
+/* ---------- 1. DESIGNTOKENS ---------- */
+:root {
+    /* Färger – tagna ur logotypen och bilderna från 2026 */
+    --bark: #1c130d;        /* bas, mörk bark */
+    --bark-2: #261a12;      /* alternerande sektion */
+    --bark-3: #33241a;      /* upphöjda ytor */
+    --tan: #b1814a;         /* logotypens färg, rubriker och knappar */
+    --tan-ljus: #d19d5e;    /* hover */
+    --kraft: #cdb07f;       /* kraftpapper, som affischerna på plats */
+    --rost: #8f3d1e;        /* armeringsnät och små detaljer */
+    --dimma: #ebe3d4;       /* brödtext på mörkt */
+    --dimma-dov: #b9ad99;   /* sekundär text */
+
+    /* Typsnitt */
+    --font-rubrik: 'Bahianita', Impact, 'Arial Narrow', sans-serif;
+    --font-text: 'Courier Prime', 'Courier New', Courier, monospace;
+
+    /* Mått */
+    --kant: 20px;                               /* sidmarginal */
+    --bredd: 1160px;                            /* maxbredd innehåll */
+    --sektion: clamp(4rem, 11vw, 7.5rem);       /* luft mellan sektioner */
+    --header-hojd: 64px;
+}
+
+@media (min-width: 760px) {
+    :root { --kant: 40px; --header-hojd: 76px; }
+}
+
+/* ---------- 2. TYPSNITT ---------- */
+@font-face {
+    font-family: 'Bahianita';
+    src: url('../fonts/bahianita-latin-400-normal.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('../fonts/courier-prime-latin-400-normal.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('../fonts/courier-prime-latin-400-italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('../fonts/courier-prime-latin-700-normal.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+/* ---------- 3. GRUND ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: calc(var(--header-hojd) + 16px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+}
+
+body {
+    margin: 0;
+    background: var(--bark);
+    color: var(--dimma);
+    font-family: var(--font-text);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    overflow-x: hidden;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+h1, h2, h3 {
+    font-family: var(--font-rubrik);
+    font-weight: 400;
+    color: var(--tan);
+    margin: 0 0 0.35em;
+    letter-spacing: 0.02em;
+    text-wrap: balance;
+}
+h1 { font-size: clamp(3.6rem, 13vw, 7.5rem); line-height: 0.88; }
+h2 { font-size: clamp(2.7rem, 8vw, 4.6rem); line-height: 0.92; }
+h3 { font-size: clamp(1.9rem, 4.6vw, 2.5rem); line-height: 1; }
+
+p { margin: 0 0 1em; max-width: 62ch; }
+strong { font-weight: 700; }
+
+a { color: var(--kraft); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { color: var(--tan-ljus); }
+
+:focus-visible {
+    outline: 3px solid var(--kraft);
+    outline-offset: 3px;
+}
+
+.matt {
+    width: min(var(--bredd), 100% - 2 * var(--kant));
+    margin-inline: auto;
+}
+
+.ingress { font-size: 1.2rem; line-height: 1.6; }
+
+.visuellt-dold {
+    position: absolute !important;
+    width: 1px; height: 1px;
+    overflow: hidden; clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.hoppa-till {
+    position: absolute;
+    left: var(--kant);
+    top: -100px;
+    z-index: 2000;
+    background: var(--kraft);
+    color: var(--bark);
+    padding: 0.5rem 1rem;
+}
+.hoppa-till:focus { top: 8px; }
+
+/* ---------- 4. KNAPPAR OCH LÄNKAR ---------- */
+.knapp {
+    display: inline-block;
+    font-family: var(--font-rubrik);
+    font-size: 1.9rem;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    padding: 0.5em 1.05em 0.4em;
+    border-radius: 3px;
+    border: 2px solid var(--tan);
+    background: var(--tan);
+    color: var(--bark);
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.knapp:hover { background: var(--tan-ljus); border-color: var(--tan-ljus); color: var(--bark); }
+
+.knapp--linje {
+    background: transparent;
+    border-color: var(--dimma);
+    color: var(--dimma);
+}
+.knapp--linje:hover { background: var(--dimma); border-color: var(--dimma); color: var(--bark); }
+
+.knapp--mork {
+    background: var(--bark);
+    border-color: var(--bark);
+    color: var(--kraft);
+}
+.knapp--mork:hover { background: var(--bark-3); border-color: var(--bark-3); color: var(--dimma); }
+
+.knapprad { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
+
+/* ---------- 5. SIDHUVUD OCH MENY ---------- */
+.sidhuvud-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: var(--header-hojd);
+    background: rgba(28, 19, 13, 0.96);
+    border-bottom: 1px solid rgba(177, 129, 74, 0.35);
+}
+
+.sidhuvud-nav .matt {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.logga-lank { display: block; flex-shrink: 0; }
+.logga-lank img { height: 34px; width: auto; }
+
+.meny-knapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: none;
+    border: 0;
+    color: var(--dimma);
+    font-family: var(--font-rubrik);
+    font-size: 1.6rem;
+    padding: 0.4rem 0;
+    cursor: pointer;
+}
+.meny-knapp .streck,
+.meny-knapp .streck::before,
+.meny-knapp .streck::after {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: currentColor;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.meny-knapp .streck { position: relative; }
+.meny-knapp .streck::before,
+.meny-knapp .streck::after { content: ''; position: absolute; left: 0; }
+.meny-knapp .streck::before { top: -8px; }
+.meny-knapp .streck::after { top: 8px; }
+.meny-knapp[aria-expanded="true"] .streck { background: transparent; }
+.meny-knapp[aria-expanded="true"] .streck::before { transform: translateY(8px) rotate(45deg); }
+.meny-knapp[aria-expanded="true"] .streck::after { transform: translateY(-8px) rotate(-45deg); }
+
+.huvudmeny {
+    position: fixed;
+    inset: var(--header-hojd) 0 0 0;
+    background: var(--bark);
+    padding: 2rem var(--kant) 3rem;
+    overflow-y: auto;
+    display: none;
+}
+.huvudmeny.oppen { display: block; }
+
+.huvudmeny ul { list-style: none; margin: 0; padding: 0; }
+.huvudmeny li + li { border-top: 1px solid rgba(177, 129, 74, 0.25); }
+.huvudmeny a {
+    display: block;
+    padding: 0.55rem 0 0.45rem;
+    font-family: var(--font-rubrik);
+    font-size: 2.6rem;
+    line-height: 1;
+    color: var(--dimma);
+    text-decoration: none;
+}
+.huvudmeny a:hover,
+.huvudmeny a[aria-current="page"] { color: var(--tan); }
+
+body.meny-oppen { overflow: hidden; }
+
+@media (min-width: 1000px) {
+    .logga-lank img { height: 42px; }
+    .meny-knapp { display: none; }
+    .huvudmeny {
+        position: static;
+        display: block;
+        padding: 0;
+        background: none;
+        overflow: visible;
+    }
+    .huvudmeny ul { display: flex; align-items: center; gap: 1.6rem; }
+    .huvudmeny li + li { border-top: 0; }
+    .huvudmeny a {
+        font-size: 1.8rem;
+        padding: 0.3rem 0 0.15rem;
+        border-bottom: 2px solid transparent;
+    }
+    .huvudmeny a[aria-current="page"] { border-bottom-color: var(--tan); }
+    .huvudmeny .meny-biljetter a {
+        background: var(--kraft);
+        color: var(--bark);
+        padding: 0.4rem 0.8rem 0.3rem;
+        border: 0;
+        transform: rotate(-2deg);
+    }
+    .huvudmeny .meny-biljetter a:hover,
+    .huvudmeny .meny-biljetter a[aria-current="page"] { background: var(--tan-ljus); color: var(--bark); }
+}
+
+/* ---------- 6. HERO OCH SIDHUVUD-BILD ---------- */
+.hero {
+    position: relative;
+    min-height: calc(100svh - var(--header-hojd));
+    display: flex;
+    align-items: flex-end;
+    isolation: isolate;
+}
+
+.hero-bild,
+.sidbild-bild {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.hero::after,
+.sidbild::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(to top, rgba(28, 19, 13, 0.94) 0%, rgba(28, 19, 13, 0.6) 50%, rgba(28, 19, 13, 0.1) 100%);
+}
+
+.hero-innehall {
+    padding-block: 3rem clamp(3rem, 9vh, 6rem);
+}
+
+.hero-rund-logga { width: 76px; margin-bottom: 1.25rem; }
+.hero-text-logga { width: min(560px, 86vw); margin: 0 0 1.4rem -0.4%; }
+
+.hero-datum {
+    font-weight: 700;
+    font-size: clamp(1.3rem, 3.6vw, 1.75rem);
+    line-height: 1.25;
+    margin: 0;
+}
+.hero-plats {
+    color: var(--kraft);
+    font-size: clamp(1.1rem, 3vw, 1.35rem);
+    margin: 0.2rem 0 0;
+}
+.nedrakning {
+    color: var(--dimma-dov);
+    margin: 1.4rem 0 0;
+    font-style: italic;
+}
+.nedrakning[hidden] { display: none; }
+
+/* Undersidornas bildhuvud */
+.sidbild {
+    position: relative;
+    min-height: min(62svh, 560px);
+    display: flex;
+    align-items: flex-end;
+    isolation: isolate;
+}
+.sidbild .matt { padding-block: 6rem 2.5rem; }
+.sidbild h1 { margin-bottom: 0.15em; }
+.sidbild p { font-size: 1.2rem; margin-bottom: 0; }
+
+/* ---------- 7. SEKTIONER OCH INNEHÅLL ---------- */
+.sektion { padding-block: var(--sektion); }
+.sektion--bark2 { background: var(--bark-2); }
+
+.sektion-huvud { margin-bottom: 2.5rem; }
+.sektion-huvud p { color: var(--dimma-dov); }
+
+/* Text + bild bredvid varandra */
+.delad {
+    display: grid;
+    gap: 2.5rem;
+    align-items: center;
+}
+.delad figure { margin: 0; }
+.delad img { width: 100%; border-radius: 2px; }
+
+@media (min-width: 860px) {
+    .delad { grid-template-columns: 1fr 1fr; gap: 4rem; }
+    .delad--bild-forst > figure { order: -1; }
+}
+
+figcaption {
+    font-size: 0.875rem;
+    color: var(--dimma-dov);
+    margin-top: 0.6rem;
+}
+
+/* Tre saker som händer – bild + text, ingen ram */
+.tre-saker {
+    display: grid;
+    gap: 3rem;
+}
+.tre-saker article { display: flex; flex-direction: column; }
+.tre-saker img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 2px;
+    margin-bottom: 1.2rem;
+}
+.tre-saker p { color: var(--dimma); margin-bottom: 0; }
+
+@media (min-width: 860px) {
+    .tre-saker { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+    .tre-saker article:nth-child(2) { margin-top: 4rem; }
+}
+
+/* Bildband med text ovanpå (utställare, hitta hit) */
+.band {
+    position: relative;
+    isolation: isolate;
+    padding-block: clamp(5rem, 14vw, 9rem);
+}
+.band-bild {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+.band::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(to right, rgba(28, 19, 13, 0.92) 0%, rgba(28, 19, 13, 0.75) 50%, rgba(28, 19, 13, 0.35) 100%);
+}
+.band p { font-size: 1.15rem; }
+
+/* Faktarader, t.ex. på Hitta hit */
+.fakta {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    border-top: 1px solid rgba(177, 129, 74, 0.35);
+}
+.fakta > div {
+    display: grid;
+    gap: 0.25rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid rgba(177, 129, 74, 0.35);
+}
+.fakta dt {
+    font-family: var(--font-rubrik);
+    font-size: 1.9rem;
+    line-height: 1;
+    color: var(--tan);
+}
+.fakta dd { margin: 0; max-width: 60ch; }
+.fakta dd p:last-child { margin-bottom: 0; }
+
+@media (min-width: 760px) {
+    .fakta > div { grid-template-columns: 14rem 1fr; gap: 2rem; align-items: baseline; }
+}
+
+/* Vanliga frågor */
+.fragor details {
+    border-bottom: 1px solid rgba(177, 129, 74, 0.35);
+}
+.fragor details:first-of-type { border-top: 1px solid rgba(177, 129, 74, 0.35); }
+.fragor summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 1.1rem 0;
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+.fragor summary::-webkit-details-marker { display: none; }
+.fragor summary::after {
+    content: '+';
+    font-family: var(--font-rubrik);
+    font-size: 2rem;
+    line-height: 0.6;
+    color: var(--tan);
+}
+.fragor details[open] summary::after { content: '–'; }
+.fragor details > div { padding-bottom: 1.2rem; }
+
+/* Kartan – laddas först när besökaren klickar (inga Google-cookies innan) */
+.karta {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: var(--bark-3);
+    border-radius: 2px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 1.5rem;
+}
+.karta iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.karta p { color: var(--dimma-dov); font-size: 0.95rem; margin: 0.9rem auto 0; }
+
+@media (min-width: 860px) { .karta { aspect-ratio: 16 / 10; } }
+
+/* Teamet */
+.team {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+.team h3 { margin-bottom: 0.2em; }
+.team p { margin: 0; }
+
+@media (min-width: 760px) {
+    .team { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+}
+
+/* Kontaktrader */
+.kontaktlista {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+    border-top: 1px solid rgba(177, 129, 74, 0.35);
+}
+.kontaktlista li { border-bottom: 1px solid rgba(177, 129, 74, 0.35); }
+.kontaktlista a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.25rem 1rem;
+    padding: 1.1rem 0;
+    text-decoration: none;
+    color: var(--dimma);
+}
+.kontaktlista a strong {
+    font-family: var(--font-rubrik);
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 1;
+    color: var(--tan);
+}
+.kontaktlista a:hover strong { color: var(--tan-ljus); }
+.kontaktlista a span { color: var(--dimma-dov); }
+
+.pressrader { list-style: none; margin: 1.5rem 0 0; padding: 0; }
+.pressrader li { margin-bottom: 0.7rem; }
+
+/* Steg i en process (t.ex. anmälan som utställare) */
+.steg {
+    list-style: none;
+    counter-reset: steg;
+    margin: 2rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 1.75rem;
+}
+.steg li {
+    counter-increment: steg;
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1rem;
+    align-items: baseline;
+}
+.steg li::before {
+    content: counter(steg);
+    font-family: var(--font-rubrik);
+    font-size: 3.2rem;
+    line-height: 0.8;
+    color: var(--tan);
+}
+.steg p { margin: 0; }
+
+@media (min-width: 860px) {
+    .steg { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+    .steg li { grid-template-columns: 1fr; gap: 0.5rem; }
+}
+
+/* ---------- 8. AFFISCHEN PÅ ARMERINGSNÄTET ----------
+   Samma typ av kraftpappersaffisch som sitter uppklämd på armeringsnät
+   vid baren på festivalen. Används för programmet och biljettsläppet. */
+.affisch-scen {
+    position: relative;
+    isolation: isolate;
+    padding-block: clamp(4.5rem, 12vw, 8rem);
+    background-color: var(--bark);
+    /* Bakgrundsbilden sätts direkt på sektionen i HTML (style="background-image: …"),
+       så sökvägen räknas från sidan och är lätt att byta. */
+    background-size: cover;
+    background-position: center;
+}
+.affisch-scen::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(28, 19, 13, 0.62);
+}
+
+/* Armeringsnätet */
+.natet {
+    position: relative;
+    margin-inline: auto;
+    width: min(46rem, 100% - 2 * var(--kant));
+    padding: clamp(2.2rem, 6vw, 3.5rem) clamp(0.9rem, 4vw, 3rem);
+    background-image:
+        repeating-linear-gradient(90deg, transparent 0 54px, rgba(143, 61, 30, 0.9) 54px 57px),
+        repeating-linear-gradient(0deg, transparent 0 54px, rgba(120, 50, 24, 0.9) 54px 57px);
+}
+
+.affisch {
+    position: relative;
+    background-color: var(--kraft);
+    /* papperskorn */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='k'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .12 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23k)'/%3E%3C/svg%3E");
+    color: var(--bark);
+    padding: clamp(2rem, 6vw, 3.25rem) clamp(1.4rem, 5vw, 3rem) clamp(1.75rem, 5vw, 2.75rem);
+    transform: rotate(-0.6deg);
+    box-shadow: 0 22px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Klädnyporna */
+.affisch::before,
+.affisch::after {
+    content: '';
+    position: absolute;
+    top: -26px;
+    width: 16px;
+    height: 52px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #a77c45 0 45%, #7d5a30 45% 55%, #c49559 55% 100%);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.45);
+}
+.affisch::before { left: 18%; transform: rotate(-4deg); }
+.affisch::after { right: 18%; transform: rotate(3deg); }
+
+@media (min-width: 760px) {
+    .affisch { transform: rotate(-1deg); }
+}
+
+.affisch h1,
+.affisch h2,
+.affisch h3 { color: var(--bark); }
+
+.affisch-titel {
+    text-align: center;
+    font-size: clamp(4rem, 15vw, 7rem);
+    line-height: 0.85;
+    margin-bottom: 0.1em;
+}
+.affisch-undertitel {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin: 0 auto 1.75rem;
+}
+
+.affisch-pass {
+    border-top: 2px solid var(--bark);
+    padding-top: 1.1rem;
+    margin-top: 1.25rem;
+}
+.affisch-pass h2,
+.affisch-pass h3 {
+    font-size: clamp(2rem, 6vw, 2.6rem);
+    margin-bottom: 0.25em;
+}
+.affisch a { color: var(--bark); font-weight: 700; }
+.affisch a:hover { color: var(--rost); }
+.affisch a.knapp { color: var(--kraft); font-weight: 400; }
+.affisch a.knapp:hover { color: var(--dimma); }
+.affisch .knapprad { justify-content: center; }
+.affisch-pass ul { list-style: none; margin: 0; padding: 0; }
+.affisch-pass li {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    gap: 0.75rem;
+    padding: 0.35rem 0;
+}
+.affisch-pass li.utan-tid { grid-template-columns: 1fr; }
+.affisch-pass time { font-weight: 700; }
+.affisch-pass p { margin: 0; }
+
+.affisch-fot {
+    border-top: 2px solid var(--bark);
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    font-size: 0.95rem;
+    text-align: center;
+}
+.affisch-fot p { margin: 0 auto; }
+
+.affisch .knapp { font-size: 1.7rem; }
+
+/* ---------- 9. GALLERI ---------- */
+.galleri {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 42vw;
+    gap: 6px;
+    margin: 0;
+}
+.galleri img { width: 100%; height: 100%; object-fit: cover; }
+.galleri .stor { grid-column: span 2; }
+
+@media (min-width: 860px) {
+    .galleri { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 15vw; gap: 8px; }
+    .galleri .stor { grid-column: span 2; grid-row: span 2; }
+    .galleri .hog { grid-row: span 2; }
+}
+@media (min-width: 1500px) { .galleri { grid-auto-rows: 230px; } }
+
+/* ---------- 10. SIDFOT ---------- */
+.sidfot {
+    background: var(--bark-2);
+    border-top: 3px solid var(--rost);
+    padding-block: 3.5rem 2.5rem;
+    font-size: 0.95rem;
+}
+.sidfot-grid {
+    display: grid;
+    gap: 2.25rem;
+}
+.sidfot img { height: 40px; width: auto; margin-bottom: 1rem; }
+.sidfot h2 {
+    font-size: 1.8rem;
+    color: var(--tan);
+    margin-bottom: 0.4em;
+}
+.sidfot ul { list-style: none; margin: 0; padding: 0; }
+.sidfot li { margin-bottom: 0.35rem; }
+.sidfot p { margin-bottom: 0.4rem; }
+.sidfot a { color: var(--dimma); }
+.sidfot a:hover { color: var(--tan-ljus); }
+.sidfot-knapp {
+    background: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    color: var(--dimma);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+    cursor: pointer;
+}
+.sidfot-knapp:hover { color: var(--tan-ljus); }
+.sidfot-botten {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(177, 129, 74, 0.25);
+    color: var(--dimma-dov);
+    font-size: 0.85rem;
+}
+.sidfot-botten p { max-width: none; }
+
+@media (min-width: 760px) {
+    .sidfot-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; }
+}
+
+/* ---------- 11. COOKIE-RUTA ---------- */
+.cookie-ruta {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3000;
+    background: var(--bark-3);
+    border-top: 3px solid var(--tan);
+    padding: 1.25rem var(--kant);
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.4);
+}
+.cookie-ruta[hidden] { display: none; }
+.cookie-ruta .innehall {
+    max-width: var(--bredd);
+    margin-inline: auto;
+    display: grid;
+    gap: 1rem;
+}
+.cookie-ruta p { margin: 0; font-size: 0.95rem; }
+.cookie-ruta .knapprad { margin-top: 0; }
+.cookie-ruta .knapp { font-size: 1.5rem; }
+
+@media (min-width: 760px) {
+    .cookie-ruta .innehall { grid-template-columns: 1fr auto; align-items: center; gap: 2rem; }
+}
+
+/* ---------- 12. POLICYSIDOR OCH 404 ---------- */
+.textsida { padding-block: clamp(3rem, 8vw, 5rem) var(--sektion); }
+.textsida .matt { max-width: 46rem; }
+.textsida h1 { font-size: clamp(3rem, 10vw, 5rem); }
+.textsida h2 { font-size: clamp(2rem, 5vw, 2.6rem); margin-top: 1.6em; }
+.textsida ul { padding-left: 1.2rem; max-width: 60ch; }
+.textsida li { margin-bottom: 0.4rem; }
+.uppdaterad { color: var(--dimma-dov); font-style: italic; }
+
+.fel-sida {
+    min-height: calc(100svh - var(--header-hojd));
+}
+.fel-sida h1 { font-size: clamp(5rem, 22vw, 11rem); }
+
+.knapprad + p { margin-top: 1.5rem; }
+
+/* Faktalistan bredvid kartan: rubrik ovanför text i stället för bredvid */
+.delad .fakta > div { grid-template-columns: 1fr; gap: 0.35rem; }
+.delad--topp { align-items: start; }
+
+@media (min-width: 860px) {
+    /* På bred skärm räcker det med mörkt i nederkant, så bilden syns mer */
+    .hero::after,
+    .sidbild::after {
+        background: linear-gradient(to top, rgba(28, 19, 13, 0.92) 0%, rgba(28, 19, 13, 0.45) 40%, rgba(28, 19, 13, 0) 75%);
+    }
+}

@@ -1,90 +1,125 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+    <!-- BW:GEMENSAM-HEAD START -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Q9FT55M7K"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-4Q9FT55M7K');
-    </script>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1c130d">
+    <link rel="preload" href="fonts/bahianita-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/courier-prime-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- BW:GEMENSAM-HEAD SLUT -->
     <title>Cookie-policy | Backwoods Festival</title>
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Bahianita&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Vilka cookies backwoodsfestival.se använder och hur du ändrar ditt val.">
+    <link rel="canonical" href="https://backwoodsfestival.se/cookies.html">
 </head>
 <body>
-
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="index.html">
-                <img src="images/logo-header.png" alt="Backwoods Festival Logotyp" class="nav-logo">
+    <!-- BW:SIDHUVUD START -->
+    <a class="hoppa-till" href="#innehall">Hoppa till innehållet</a>
+    <header class="sidhuvud-nav">
+        <div class="matt">
+            <a class="logga-lank" href="./" aria-label="Backwoods Festival, till startsidan">
+                <img src="images/backwoods-logga-liggande.webp" alt="Backwoods Festival" width="480" height="120">
             </a>
-            <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html#hem">Hem</a></li>
-                <li><a href="index.html#biljetter">Biljetter</a></li>
-                <li><a href="index.html#plats">Hitta hit</a></li>
-                <li><a href="kontakt.html">Kontakta oss</a></li>
-            </ul>
+            <button class="meny-knapp" type="button" aria-expanded="false" aria-controls="huvudmeny"><span class="streck" aria-hidden="true"></span>Meny</button>
+            <nav id="huvudmeny" class="huvudmeny" aria-label="Huvudmeny">
+                <ul>
+                    <li><a href="./" data-sida="index.html">Hem</a></li>
+                    <li class="meny-biljetter"><a href="biljetter.html" data-sida="biljetter.html">Biljetter</a></li>
+                    <li><a href="program.html" data-sida="program.html">Årets program</a></li>
+                    <li><a href="hitta-hit.html" data-sida="hitta-hit.html">Hitta hit</a></li>
+                    <li><a href="om-oss.html" data-sida="om-oss.html">Om oss</a></li>
+                    <li><a href="utstallare.html" data-sida="utstallare.html">Utställare</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
+    <!-- BW:SIDHUVUD SLUT -->
 
-    <!-- Policy Content -->
-    <section class="policy-page">
-        <div class="container">
-            <h1>COOKIE-POLICY</h1>
-            <p class="update-date">Senast uppdaterad: 7 februari 2026</p>
-            
+    <main id="innehall" class="textsida">
+        <div class="matt">
+            <h1>Cookie-policy</h1>
+            <p class="uppdaterad">Senast uppdaterad: 20 oktober 2026</p>
+
             <h2>Vad är cookies?</h2>
-            <p>Cookies är små textfiler som lagras på din enhet när du besöker vår webbplats. De hjälper oss att förbättra din upplevelse och analysera hur webbplatsen används.</p>
-            
-            <h2>Vilka cookies använder vi?</h2>
-            
-            <h3>Google Analytics</h3>
-            <p>Vi använder Google Analytics för att förstå hur besökare interagerar med vår webbplats.</p>
-            <p><strong>Typ:</strong> Analys-cookies</p>
-            <p><strong>Syfte:</strong> Mäta trafik, förstå användarbeteende, förbättra webbplatsen</p>
-            <p><strong>Livslängd:</strong> Upp till 2 år</p>
-            <p><strong>Tredjepartsleverantör:</strong> Google LLC</p>
-            
-            <h2>Hur hanterar du cookies?</h2>
-            <p>Du kan när som helst ändra dina cookie-inställningar genom webbläsarens inställningar:</p>
-            <ul>
-                <li><strong>Chrome:</strong> Inställningar → Sekretess och säkerhet → Cookies</li>
-                <li><strong>Firefox:</strong> Inställningar → Sekretess och säkerhet</li>
-                <li><strong>Safari:</strong> Inställningar → Sekretess</li>
-            </ul>
-            
-            <p>Observera att om du blockerar cookies kan vissa funktioner på webbplatsen sluta fungera korrekt.</p>
-            
-            <h2>Mer information</h2>
-            <p>Läs mer om hur Google använder data i vår <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
-            
-            <p>Har du frågor? Kontakta oss på hannah@risander.se</p>
-            
-        </div>
-    </section>
+            <p>Cookies är små textfiler som sparas i din webbläsare när du besöker en webbplats.</p>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p><a href="integritet.html">Integritetspolicy</a> | <a href="cookies.html">Cookie-policy</a></p>
-            <p>&copy; 2026 Backwoods Festival. All rights reserved.</p>
+            <h2>Vilka cookies använder vi?</h2>
+            <p>Bara en sorts: statistik från <strong>Google Analytics</strong>. Den visar oss hur många som besöker sajten och vilka sidor som läses, så att vi kan göra den bättre.</p>
+            <ul>
+                <li><strong>Typ:</strong> statistik</li>
+                <li><strong>Livslängd:</strong> upp till 2 år</li>
+                <li><strong>Leverantör:</strong> Google</li>
+            </ul>
+            <p>Google Analytics laddas <strong>bara om du säger ja</strong>. Säger du nej sätts inga statistikcookies och sajten funkar precis likadant.</p>
+            <p>Vi sparar ditt val i din webbläsare, så att vi inte frågar varje gång.</p>
+
+            <h2>Ändra ditt val</h2>
+            <p>Du kan ändra dig när som helst.</p>
+            <div class="knapprad">
+                <button type="button" class="knapp" data-cookie="andra">Ändra cookie-val</button>
+            </div>
+            <p>Du kan också radera cookies i webbläsarens inställningar.</p>
+
+            <h2>Mer information</h2>
+            <p>Läs om hur Google hanterar data i <a href="https://policies.google.com/privacy" rel="noopener">Googles integritetspolicy</a>. Har du frågor? Mejla <a href="mailto:hej@backwoodsfestival.se">hej@backwoodsfestival.se</a>.</p>
+        </div>
+    </main>
+
+    <!-- BW:SIDFOT START -->
+    <footer class="sidfot">
+        <div class="matt">
+            <div class="sidfot-grid">
+                <div>
+                    <img src="images/backwoods-logga-liggande.webp" alt="Backwoods Festival" width="480" height="120" loading="lazy">
+                    <p>Hantverksfestivalen på Rotsågen i Rot, Älvdalen.</p>
+                    <p>Lördag 15 maj 2027</p>
+                </div>
+                <div>
+                    <h2>Festivalen</h2>
+                    <ul>
+                        <li><a href="biljetter.html">Biljetter</a></li>
+                        <li><a href="program.html">Årets program</a></li>
+                        <li><a href="hitta-hit.html">Hitta hit</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Mer</h2>
+                    <ul>
+                        <li><a href="om-oss.html">Om oss</a></li>
+                        <li><a href="utstallare.html">Utställare</a></li>
+                        <li><a href="om-oss.html#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Hör av dig</h2>
+                    <ul>
+                        <li><a href="mailto:hej@backwoodsfestival.se">hej@backwoodsfestival.se</a></li>
+                        <li><a href="https://www.instagram.com/backwoods_festival/" rel="noopener">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidfot-botten">
+                <p>Bilderna är från Backwoods 2026. Foto: Tobbe Nilsson m.fl.</p>
+                <p>&copy; 2026 Backwoods Festival. <a href="integritet.html">Integritetspolicy</a>. <a href="cookies.html">Cookies</a>. <button type="button" class="sidfot-knapp" data-cookie="andra">Ändra cookie-val</button></p>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <div id="cookie-ruta" class="cookie-ruta" role="region" aria-label="Cookie-val" hidden>
+        <div class="innehall">
+            <p>Får vi använda Google Analytics för att se hur sajten används? Det sätter några cookies. Säger du nej funkar allt precis likadant. <a href="cookies.html">Läs mer om cookies</a></p>
+            <div class="knapprad">
+                <button type="button" class="knapp" data-cookie="ja">Ja, det går bra</button>
+                <button type="button" class="knapp knapp--linje" data-cookie="nej">Nej tack</button>
+            </div>
+        </div>
+    </div>
 
+    <script src="js/main.js" defer></script>
+    <!-- BW:SIDFOT SLUT -->
 </body>
 </html>

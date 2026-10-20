@@ -1,286 +1,311 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+    <!-- BW:GEMENSAM-HEAD START -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Q9FT55M7K"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-4Q9FT55M7K');
-    </script>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Bahianita&display=swap" rel="stylesheet">
-
-    <!-- SEO Meta Tags -->
-    <title>Backwoods Festival 2026 | Hantverk, Timbersport & Livemusik i Älvdalen, Dalarna</title>
-    <meta name="description" content="Backwoods Festival 16 maj 2026 på Rotsågen i Älvdalen. En rå hyllning till hantverket med workshops, timbersport, liveband, mat, dryck och camping. Festivaler i Dalarna.">
-    <meta name="keywords" content="Backwoods, festival Dalarna, festival Älvdalen, hantverk festival, timbersport, festivaler Sverige 2026, musikfestival, workshop">
-    <meta name="author" content="Backwoods Festival">
-    
-    <!-- Open Graph (Facebook, LinkedIn) -->
-    <meta property="og:title" content="Backwoods Festival 2026 – Älvdalen, Dalarna">
-    <meta property="og:description" content="En rå hyllning till hantverket. 16 maj på Rotsågen.">
-    <meta property="og:image" content="images/hero-1.jpg">
-    <meta property="og:url" content="https://backwoodsfestival.se">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1c130d">
+    <link rel="preload" href="fonts/bahianita-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/courier-prime-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- BW:GEMENSAM-HEAD SLUT -->
+    <title>Backwoods Festival 2027 – hantverksfestival på Rotsågen i Älvdalen</title>
+    <meta name="description" content="Backwoods är hantverksfestivalen på det nedlagda sågverket Rotsågen i Rot, Älvdalen. Lördag 15 maj 2027: hantverkare, prova på, mat, fika, bärs och fest med livemusik. Biljetter släpps snart.">
+    <link rel="canonical" href="https://backwoodsfestival.se/">
     <meta property="og:type" content="website">
-    
-    <!-- Twitter Card -->
+    <meta property="og:locale" content="sv_SE">
+    <meta property="og:site_name" content="Backwoods Festival">
+    <meta property="og:title" content="Backwoods Festival 2027 – lördag 15 maj på Rotsågen i Älvdalen">
+    <meta property="og:description" content="Hantverk, käk och fest på ett nedlagt sågverk i Rot, Älvdalen. Biljetter släpps snart.">
+    <meta property="og:url" content="https://backwoodsfestival.se/">
+    <meta property="og:image" content="https://backwoodsfestival.se/images/og-backwoods-2027.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Uppstoppad björn på baren under Backwoods 2026, med texten Backwoods, lördag 15 maj 2027, Rotsågen i Rot, Älvdalen">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Backwoods Festival 2026">
-    <meta name="twitter:description" content="Hantverk, timbersport & livemusik i Älvdalen. 16 maj.">
-    <meta name="twitter:image" content="images/hero-1.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Schema.org Event Markup (Google Rich Results) -->
+
+    <!-- BW-EVENT-DATA START
+         Strukturerad data för Google och AI-sök. Håll datum, plats och
+         beskrivning i synk med programmet (program.html har samma block). -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "Backwoods Festival",
-      "startDate": "2026-05-16T10:00",
-      "endDate": "2026-05-16T23:00",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "location": {
-        "@type": "Place",
-        "name": "Rotsågen",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Rotsågen",
-          "addressLocality": "Älvdalen",
-          "addressRegion": "Dalarna",
-          "addressCountry": "SE"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://backwoodsfestival.se/#organisation",
+          "name": "Backwoods Festival",
+          "url": "https://backwoodsfestival.se/",
+          "logo": "https://backwoodsfestival.se/images/backwoods-logga-rund.png",
+          "email": "hej@backwoodsfestival.se",
+          "sameAs": ["https://www.instagram.com/backwoods_festival/"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://backwoodsfestival.se/#webbplats",
+          "name": "Backwoods Festival",
+          "url": "https://backwoodsfestival.se/",
+          "inLanguage": "sv-SE",
+          "publisher": { "@id": "https://backwoodsfestival.se/#organisation" }
+        },
+        {
+          "@type": "Festival",
+          "@id": "https://backwoodsfestival.se/#backwoods-2027",
+          "name": "Backwoods Festival 2027",
+          "description": "Hantverksfestival på det nedlagda sågverket Rotsågen i Rot, Älvdalen. Under dagen visar och säljer hantverkare, konstnärer och kreatörer sitt hantverk och besökarna får prova på. Mat, fika och bärs. På kvällen fest med livemusik.",
+          "startDate": "2027-05-15",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "inLanguage": "sv",
+          "url": "https://backwoodsfestival.se/",
+          "image": [
+            "https://backwoodsfestival.se/images/og-backwoods-2027.jpg",
+            "https://backwoodsfestival.se/images/foto/backwoods-2026-ko-vid-baren-1600.webp",
+            "https://backwoodsfestival.se/images/foto/backwoods-2026-spankorgar-1600.webp"
+          ],
+          "location": {
+            "@type": "Place",
+            "name": "Rotsågen",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Rotsågen, Rot",
+              "addressLocality": "Älvdalen",
+              "addressRegion": "Dalarna",
+              "addressCountry": "SE"
+            },
+            "geo": { "@type": "GeoCoordinates", "latitude": 61.261955, "longitude": 14.037 }
+          },
+          "organizer": { "@id": "https://backwoodsfestival.se/#organisation" }
         }
-      },
-      "image": "images/hero-1.jpg",
-      "description": "En rå hyllning till hantverket med workshops, timbersport, liveband, mat och dryck.",
-      "organizer": {
-        "@type": "Organization",
-        "name": "Backwoods Festival",
-        "url": "https://backwoodsfestival.se"
-      }
+      ]
     }
     </script>
+    <!-- BW-EVENT-DATA SLUT -->
 </head>
-
-
-
 <body>
-
-    <!-- Fixed Background Layer -->
-    <div class="fixed-background"></div>
-
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <img src="images/logo-header.png" alt="Backwoods Festival Logotyp" class="nav-logo">
-            <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#hem">Hem</a></li>
-                <li><a href="biljetter.html">Biljetter</a></li>
-                <li><a href="#plats">Hitta hit</a></li>
-                <li><a href="kontakt.html">Kontakta oss</a></li>
-            </ul>
+    <!-- BW:SIDHUVUD START -->
+    <a class="hoppa-till" href="#innehall">Hoppa till innehållet</a>
+    <header class="sidhuvud-nav">
+        <div class="matt">
+            <a class="logga-lank" href="./" aria-label="Backwoods Festival, till startsidan">
+                <img src="images/backwoods-logga-liggande.webp" alt="Backwoods Festival" width="480" height="120">
+            </a>
+            <button class="meny-knapp" type="button" aria-expanded="false" aria-controls="huvudmeny"><span class="streck" aria-hidden="true"></span>Meny</button>
+            <nav id="huvudmeny" class="huvudmeny" aria-label="Huvudmeny">
+                <ul>
+                    <li><a href="./" data-sida="index.html" aria-current="page">Hem</a></li>
+                    <li class="meny-biljetter"><a href="biljetter.html" data-sida="biljetter.html">Biljetter</a></li>
+                    <li><a href="program.html" data-sida="program.html">Årets program</a></li>
+                    <li><a href="hitta-hit.html" data-sida="hitta-hit.html">Hitta hit</a></li>
+                    <li><a href="om-oss.html" data-sida="om-oss.html">Om oss</a></li>
+                    <li><a href="utstallare.html" data-sida="utstallare.html">Utställare</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
+    <!-- BW:SIDHUVUD SLUT -->
 
-    <!-- Hero Section -->
-    <section id="hem" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <img src="images/logo.png" alt="Backwoods Festival Logotyp - Rund Logga" class="hero-logo">
-            <img src="images/logo-text.png" alt="Backwoods Festival 2026 - Hantverk och Timbersport i Älvdalen" class="hero-text-logo">
-            <p class="hero-subtitle">Rotsågen, Älvdalen – 16 Maj 2026</p>
-            <a href="#biljetter" class="cta-button">Säkra din biljett nu!</a>
-        </div>
-    </section>
+    <main id="innehall">
 
-    <!-- Om Section -->
-    <section id="om" class="about">
-        <div class="container">
-            <h2>VÄRLDSPREMIÄR FÖR EN NY FESTIVAL!</h2>
-            <p>Backwoods hämtar sina rötter ur Älvdalens historia och vi vill nu hylla människorna bakom hantverket med en egen festival.</p>
-            <p>Med en lång tradition av kreatörer, som skapar, uppfinner och förädlar så vill vi samla kreativa hantverkare på samma plats.</p>
-            <p>Därför skapar vi Backwoods – på den självklara platsen – Rotsågen!</p>
-        </div>
-    </section>
-
-    <!-- Vad Händer Section -->
-    <section id="vad-hander" class="what-happens">
-        <div class="container">
-            <h2>VAD HÄNDER?</h2>
-            
-            <div class="happening-block">
-                <h3>Under dagen (11-16)</h3>
-                <p>Det blir hantverkare, konstnärer & kreatörer av alla dess former. Det blir landslaget i <strong>STIHL TIMBERSPORTS®</strong>. Det blir mat, fika och bärs. Det blir Norrlands coolaste DJ och det blir liveband.</p>
-                <p>Besökarna ska både få beskåda och prova på allt från att köra grävmaskin till att tälja.</p>
-                
-                <!-- TIMBERSPORTS Video -->
-                <div class="timbersports-video">
-                    <iframe src="https://www.youtube.com/embed/aJIvD0Ixoqg?autoplay=1&mute=1&loop=1&playlist=aJIvD0Ixoqg" title="STIHL TIMBERSPORTS®" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- HERO -->
+        <section class="hero" aria-label="Backwoods Festival 2027">
+            <img class="hero-bild"
+                 src="images/foto/backwoods-rotsagen-i-motljus-1600.webp"
+                 srcset="images/foto/backwoods-rotsagen-i-motljus-800.webp 800w, images/foto/backwoods-rotsagen-i-motljus-1600.webp 1600w, images/foto/backwoods-rotsagen-i-motljus-2400.webp 2400w"
+                 sizes="100vw" width="1600" height="1066" fetchpriority="high"
+                 alt="Sågverkstaket på Rotsågen i siluett mot kvällssolen, med dimma mellan tallarna">
+            <div class="matt hero-innehall">
+                <img class="hero-rund-logga" src="images/backwoods-logga-rund.webp" alt="" width="240" height="235">
+                <h1 class="hero-titel">
+                    <img class="hero-text-logga" src="images/backwoods-logga-text.webp" width="744" height="192" alt="Backwoods Festival 2027">
+                </h1>
+                <p class="hero-datum"><time datetime="2027-05-15">Lördag 15 maj 2027</time></p>
+                <p class="hero-plats">Rotsågen i Rot, Älvdalen</p>
+                <div class="knapprad">
+                    <a class="knapp" href="biljetter.html">Biljetter släpps snart</a>
+                    <a class="knapp knapp--linje" href="program.html">Se programmet</a>
                 </div>
+                <p class="nedrakning" data-nedrakning hidden></p>
             </div>
-            
-            <div class="happening-block">
-                <h3>På kvällen (18-01)</h3>
-                <p>Då blir det en rekorderlig fest med mat, musik och mys på älvdalsvis.</p>
-                <p>Vi öppnar för Backwoods Dinner och sedan blir det liveband och hålligång!</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Liveband Section -->
-    <section id="liveband" class="liveband">
-        <div class="container">
-            <h2>LIVEBAND?</h2>
-            
-            <div class="bands-grid">
-                <!-- Östen med Resten -->
-                <div class="band-card">
-                    <h3>Östen med resten firar 40 år på scenen!</h3>
-                    
-                    <p>Med en unik blandning av musikalisk skicklighet, humor och ren spelglädje bjuder Östen med Resten på en liveupplevelse utöver det vanliga. Bandet har under åren gjort sig känt för sina lekfulla tolkningar av välkända låtar – där inget nummer är det andra likt.</p>
-                    
-                    <div class="band-image">
-                        <img src="images/osten-med-resten.jpg" alt="Östen med Resten - 40 år på scenen">
+        <!-- OM FESTIVALEN -->
+        <section class="sektion">
+            <div class="matt delad">
+                <div>
+                    <h2>Hantverk, käk och fest på ett nedlagt sågverk</h2>
+                    <p class="ingress">Backwoods är en hyllning till hantverket och till folket bakom det.</p>
+                    <p>I Älvdalen har det alltid funnits människor som skapar, uppfinner och förädlar. En gång om året samlar vi dem på ett och samma ställe: Rotsågen, det gamla sågverket i Rot.</p>
+                    <p>Under dagen visar hantverkarna vad de kan, och du får prova på själv. På kvällen blir det fest med livemusik.</p>
+                    <p>Premiären 2026 bjöd på regn. Folk kom ändå.</p>
+                    <div class="knapprad">
+                        <a class="knapp knapp--linje" href="om-oss.html">Läs mer om oss</a>
                     </div>
-                    
-                    <p>På scen möts publiken av svängiga rytmer, oväntade arrangemang och en stor dos självdistans. Här blandas dansband, swing, schlager och nostalgi till en fartfylld show som får både skratt och dansgolv att vibrera.</p>
-                    
-                    <p>Oavsett om du vill dansa, sjunga med eller bara luta dig tillbaka och njuta av underhållning i toppklass, levererar Östen med Resten en show som garanterat lämnar avtryck.</p>
                 </div>
-                
-                <!-- Jonny Cartong -->
-                <div class="band-card">
-                    <h3>JONNY CARTONG</h3>
-                    
-                    <p>Har man festival på ett nostalgiskt sågverk ska man banne mig ha nostalgiska band! Idag presenterar vi stolt 80-talets största rockband från Älvdalen!</p>
-                    
-                    <div class="band-image">
-                        <img src="images/jonny-cartong-backwoods-festival.jpg" alt="Jonny Cartong - 80-talets bonnrock">
-                    </div>
+                <figure>
+                    <img src="images/foto/backwoods-2026-veteranbil-vid-sagen-1600.webp"
+                         srcset="images/foto/backwoods-2026-veteranbil-vid-sagen-800.webp 600w, images/foto/backwoods-2026-veteranbil-vid-sagen-1600.webp 1200w"
+                         sizes="(min-width: 860px) 560px, 100vw" width="1200" height="1600" loading="lazy" decoding="async"
+                         alt="En blå veteranbil framför besökare och sågverkets tak på Rotsågen under Backwoods 2026">
+                </figure>
+            </div>
+        </section>
 
-                    <p>Bandet startades i slutet av 70-talet och Jonny Cartong betyder "det blir drag på festen" – och det är precis vad det blir!</p>
-                    
-                    <p>Bonnrock i sin bästa form, det här ser vi fram emot! 🤎🪵</p>
+        <!-- VAD HÄNDER -->
+        <section class="sektion sektion--bark2">
+            <div class="matt">
+                <div class="sektion-huvud">
+                    <h2>Vad händer?</h2>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- För Hantverkare Section -->
-    <section id="hantverkare" class="for-craftsmen">
-        <div class="container">
-            <h2>ATT VARA HANTVERKARE PÅ BACKWOODS</h2>
-            <p>Vi vill gärna att du kommer och joinar oss!</p>
-            <p>I år ställer hantverkare ut <strong>gratis</strong> och vi vill gärna att ni gör något in action. Ännu bättre om besökare också kan få prova på!</p>
-            <p>Självklart får du kränga dina livsverk under dagen.</p>
-            <p><strong>Platserna är 3x3 meter</strong> – men hojta om du vill ha mer plats! Begränsat utrymme i år, så boka fort!</p>
-            <a href="mailto:hej@backwoodsfestival.se?subject=Ansökan som utställare - Backwoods 2026&body=Hej!%0A%0AJag vill gärna ställa ut på Backwoods 2026!%0A%0ANamn:%0ATelefon:%0AE-post:%0AInstagram/Facebook:%0A%0AVad jag gör/skapar:%0A%0AÖnskad platsstorlek (standard 3x3m):%0A%0AKommer ni göra något in action? Vad?:%0A%0AKan besökare prova på?:%0A%0AÖvrigt/Frågor:%0A%0A" class="cta-button">ANSÖK SOM UTSTÄLLARE</a>
-        </div>
-    </section>
-
-    <!-- Program Section -->
-    <section id="upplev" class="program">
-        <div class="container">
-            <h2>ÅRETS PROGRAM</h2>
-            <p class="program-subtitle">(Uppdateras löpande)</p>
-            <div class="program-image-container">
-                <img src="images/program-2-backwoods.jpeg" alt="Backwoods Festival 2026 Program" class="program-image">
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Plats Section -->
-    <section id="plats" class="location">
-        <div class="container">
-            <h2>NÄR, VAR, HUR?</h2>
-            <p>Premiäråret kör vi en dag – <strong>16 maj 2026</strong>. Platsen är det legendariska Rotsågen, kanske det coolaste gamla industriområdet vi har i bygden. Tider är 11-16 (dag) och 18-01 (kväll med Backwoods Dinner + liveband). Vi har 40 campingplatser och gott om parkering.</p>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2130.5!2d14.037!3d61.261955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNjHCsDE1JzQzLjAiTiAxNMKwMDInMTMuMiJF!5e0!3m2!1ssv!2sse!4v1234567890123!5m2!1ssv!2sse" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Biljetter Section -->
-    <section id="biljetter" class="tickets">
-        <div class="container">
-            <h2>BILJETTER</h2>
-            <p class="tickets-tagline">Dagspass med TIMBERSPORTS® och live-musik eller kvällspass med artist och DJ?</p>
-            <p class="tickets-tagline"><strong>Varför välja? Kör båda två till rabbaterat pris!</strong></p>
-            
-            <!-- Kwikk Ticket Widget -->
-            <div class="kwikk-container">
-                <script src="https://butik.kwikk.se/10094/backwoods-2026/kwikk.inline_mws.js"></script>
-                <div id="kwikk_mws_10094_backwoods-2026"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team" class="team">
-        <div class="container">
-            <h2>VILKA DRAR IGÅNG DETTA?</h2>
-            <p>Ett skönt gäng som brinner för hantverk, event och Älvdalen:</p>
-            
-            <div class="team-grid">
-                <div class="team-member">
-                    <h3>Hannah Risander</h3>
-                    <p>Festivalälskande kreatör som också driver River Valley Countryfestival.</p>
+                <div class="tre-saker">
+                    <article>
+                        <img src="images/foto/backwoods-2026-hantverk-orsa-stenhuggeri-800.webp"
+                             srcset="images/foto/backwoods-2026-hantverk-orsa-stenhuggeri-800.webp 800w, images/foto/backwoods-2026-hantverk-orsa-stenhuggeri-1600.webp 1600w"
+                             sizes="(min-width: 860px) 360px, 100vw" width="800" height="533" loading="lazy" decoding="async"
+                             alt="Fotfilar och peelingstenar från Orsa Stenhuggeri i gamla trälådor på ett hantverksbord under Backwoods 2026">
+                        <h3>Hantverk på riktigt</h3>
+                        <p>Hantverkare, konstnärer och kreatörer jobbar på plats. Titta, fråga, köp – och prova på själv.</p>
+                    </article>
+                    <article>
+                        <img src="images/foto/backwoods-2026-burgare-och-bars-800.webp"
+                             srcset="images/foto/backwoods-2026-burgare-och-bars-800.webp 600w, images/foto/backwoods-2026-burgare-och-bars-1600.webp 1200w"
+                             sizes="(min-width: 860px) 360px, 100vw" width="600" height="800" loading="lazy" decoding="async"
+                             alt="En besökare håller upp en burgare i pappersbåt och en flaska öl på Backwoods 2026">
+                        <h3>Käk, fika och bärs</h3>
+                        <p>Mat, kaffe och något kallt att dricka. Förra året höll en uppstoppad björn koll på baren.</p>
+                    </article>
+                    <article>
+                        <img src="images/foto/backwoods-2026-konsert-pa-kvallen-800.webp"
+                             srcset="images/foto/backwoods-2026-konsert-pa-kvallen-800.webp 800w, images/foto/backwoods-2026-konsert-pa-kvallen-1600.webp 1600w"
+                             sizes="(min-width: 860px) 360px, 100vw" width="800" height="533" loading="lazy" decoding="async"
+                             alt="Publiken framför scenen i orange scenljus under kvällskonserten på Backwoods 2026">
+                        <h3>Fest på kvällen</h3>
+                        <p>När hantverkarna packar ihop drar festen igång med livemusik. Vilka som spelar 2027 berättar vi snart.</p>
+                    </article>
                 </div>
-                
-                <div class="team-member">
-                    <h3>Gabriel Soors</h3>
-                    <p>Ung entreprenör med både ett gäng bolag och event i rockärmen.</p>
-                </div>
-                
-                <div class="team-member">
-                    <h3>Putte Samuelsson</h3>
-                    <p>Eventlegend som får hockeyrinkar att koka och fester att lyfta!</p>
+                <div class="knapprad">
+                    <a class="knapp" href="program.html">Se programmet</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>Följ oss på <a href="https://www.instagram.com/backwoods_festival/" target="_blank" rel="noopener">Instagram</a></p>
-            <p>Kontakt: <a href="mailto:hej@backwoodsfestival.se">hej@backwoodsfestival.se</a></p>
-            <p><a href="integritet.html">Integritetspolicy</a> | <a href="cookies.html">Cookie-policy</a></p>
-            <p>&copy; 2026 Backwoods Festival. All rights reserved.</p>
+        <!-- PREMIÄREN 2026 -->
+        <section class="sektion">
+            <div class="matt">
+                <div class="sektion-huvud">
+                    <h2>Premiären 2026</h2>
+                    <p>Den 16 maj 2026 öppnade vi Rotsågen för första gången. Så här såg det ut.</p>
+                </div>
+            </div>
+            <div class="matt">
+                <div class="galleri">
+                    <img class="stor" src="images/foto/backwoods-2026-bjorn-pa-baren-1600.webp"
+                         srcset="images/foto/backwoods-2026-bjorn-pa-baren-800.webp 800w, images/foto/backwoods-2026-bjorn-pa-baren-1600.webp 1600w"
+                         sizes="(min-width: 860px) 580px, 100vw" width="1600" height="1066" loading="lazy" decoding="async"
+                         alt="En uppstoppad björn står på en jutetäckt kyl ovanpå baren på Backwoods 2026, med ljusslingor och sågverkets stålbalkar bakom">
+                    <img src="images/foto/backwoods-2026-ko-vid-baren-800.webp"
+                         srcset="images/foto/backwoods-2026-ko-vid-baren-800.webp 800w, images/foto/backwoods-2026-ko-vid-baren-1600.webp 1600w"
+                         sizes="(min-width: 860px) 290px, 50vw" width="800" height="533" loading="lazy" decoding="async"
+                         alt="Besökare i regnjackor köar vid baren under den uppstoppade björnen på Backwoods 2026">
+                    <img src="images/foto/backwoods-2026-pickuper-i-regnet-800.webp"
+                         srcset="images/foto/backwoods-2026-pickuper-i-regnet-800.webp 800w, images/foto/backwoods-2026-pickuper-i-regnet-1600.webp 1600w"
+                         sizes="(min-width: 860px) 290px, 50vw" width="800" height="533" loading="lazy" decoding="async"
+                         alt="Gamla amerikanska pickuper, bland annat en svart och en röd Chevrolet, parkerade i regnet på Rotsågen">
+                    <img src="images/foto/backwoods-2026-skrattande-besokare-800.webp"
+                         srcset="images/foto/backwoods-2026-skrattande-besokare-800.webp 800w, images/foto/backwoods-2026-skrattande-besokare-1600.webp 1600w"
+                         sizes="(min-width: 860px) 290px, 50vw" width="800" height="533" loading="lazy" decoding="async"
+                         alt="Två festivalbesökare skrattar tillsammans på Backwoods 2026, den ena i cowboyhatt med en ölflaska i handen">
+                    <img src="images/foto/backwoods-2026-pickuper-i-dimman-800.webp"
+                         srcset="images/foto/backwoods-2026-pickuper-i-dimman-800.webp 800w, images/foto/backwoods-2026-pickuper-i-dimman-1600.webp 1600w"
+                         sizes="(min-width: 860px) 290px, 50vw" width="800" height="600" loading="lazy" decoding="async"
+                         alt="En rad gamla pickuper på festivalområdet i dimman under Backwoods 2026">
+                </div>
+            </div>
+        </section>
+
+        <!-- UTSTÄLLARE -->
+        <section class="band">
+            <img class="band-bild" src="images/foto/backwoods-2026-spankorgar-1600.webp"
+                 srcset="images/foto/backwoods-2026-spankorgar-800.webp 800w, images/foto/backwoods-2026-spankorgar-1600.webp 1600w, images/foto/backwoods-2026-spankorgar-2400.webp 2400w"
+                 sizes="100vw" width="1600" height="1066" loading="lazy" decoding="async"
+                 alt="Nytillverkade spånkorgar och högar av träspån vid en hantverkares arbetsplats under Backwoods 2026">
+            <div class="matt">
+                <h2>Gör du något med händerna?</h2>
+                <p>Vi letar hantverkare som vill visa vad de kan på Rotsågen den 15 maj 2027. Allra helst så att besökarna får prova själva.</p>
+                <div class="knapprad">
+                    <a class="knapp" href="utstallare.html">Ställ ut på Backwoods</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- HITTA HIT -->
+        <section class="sektion sektion--bark2">
+            <div class="matt">
+                <h2>Rotsågen i Rot</h2>
+                <p>Festivalen håller till på det nedlagda sågverket i Rot, strax utanför Älvdalen i norra Dalarna.</p>
+                <div class="knapprad">
+                    <a class="knapp" href="hitta-hit.html">Hitta hit</a>
+                    <a class="knapp knapp--linje" href="biljetter.html">Biljetter släpps snart</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- BW:SIDFOT START -->
+    <footer class="sidfot">
+        <div class="matt">
+            <div class="sidfot-grid">
+                <div>
+                    <img src="images/backwoods-logga-liggande.webp" alt="Backwoods Festival" width="480" height="120" loading="lazy">
+                    <p>Hantverksfestivalen på Rotsågen i Rot, Älvdalen.</p>
+                    <p>Lördag 15 maj 2027</p>
+                </div>
+                <div>
+                    <h2>Festivalen</h2>
+                    <ul>
+                        <li><a href="biljetter.html">Biljetter</a></li>
+                        <li><a href="program.html">Årets program</a></li>
+                        <li><a href="hitta-hit.html">Hitta hit</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Mer</h2>
+                    <ul>
+                        <li><a href="om-oss.html">Om oss</a></li>
+                        <li><a href="utstallare.html">Utställare</a></li>
+                        <li><a href="om-oss.html#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Hör av dig</h2>
+                    <ul>
+                        <li><a href="mailto:hej@backwoodsfestival.se">hej@backwoodsfestival.se</a></li>
+                        <li><a href="https://www.instagram.com/backwoods_festival/" rel="noopener">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidfot-botten">
+                <p>Bilderna är från Backwoods 2026. Foto: Tobbe Nilsson m.fl.</p>
+                <p>&copy; 2026 Backwoods Festival. <a href="integritet.html">Integritetspolicy</a>. <a href="cookies.html">Cookies</a>. <button type="button" class="sidfot-knapp" data-cookie="andra">Ändra cookie-val</button></p>
+            </div>
         </div>
     </footer>
 
-    <!-- Cookie Banner -->
-    <div id="cookie-banner" class="cookie-banner">
-        <div class="cookie-content">
-            <p>Vi använder cookies för att förbättra din upplevelse och analysera trafik. Genom att fortsätta använda sidan godkänner du vår användning av cookies.</p>
-            <div class="cookie-buttons">
-                <a href="cookies.html" class="cookie-link">Läs mer</a>
-                <button id="accept-cookies" class="cookie-accept">Acceptera</button>
+    <div id="cookie-ruta" class="cookie-ruta" role="region" aria-label="Cookie-val" hidden>
+        <div class="innehall">
+            <p>Får vi använda Google Analytics för att se hur sajten används? Det sätter några cookies. Säger du nej funkar allt precis likadant. <a href="cookies.html">Läs mer om cookies</a></p>
+            <div class="knapprad">
+                <button type="button" class="knapp" data-cookie="ja">Ja, det går bra</button>
+                <button type="button" class="knapp knapp--linje" data-cookie="nej">Nej tack</button>
             </div>
         </div>
     </div>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
-
+    <script src="js/main.js" defer></script>
+    <!-- BW:SIDFOT SLUT -->
 </body>
 </html>
